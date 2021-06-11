@@ -109,11 +109,12 @@
         <image class="grid-icon" src="/images/jiaoshishenppi.png"></image>
         <view class="grid-name">教室审批</view>
       </view>
+      
       <!-- <view bindtap="studyWarn" class="grid-item">
         <image class="grid-icon" src="/images/xueyeyujin.png"></image>
         <view class="grid-name">学业预警</view>
       </view> -->
-    
+
     </view>
   </view>
 
