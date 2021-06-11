@@ -1,0 +1,35 @@
+/* pages/refuse/refuse.wxss */
+page {
+  background: #FFF;
+}
+.content {
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+}
+
+.bottom {
+  position: fixed;
+  height: 98rpx;
+  width: 750rpx;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999;
+}
+
+.item {
+  margin: 0 auto;
+  margin-top: 14rpx;
+  width: 686rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  text-align: center;
+  color: #fff;
+  background: #5D88FF;
+  border-radius: 44rpx;
+}
+
+.set_textarea {
+  min-height: 85vh !important;
+}

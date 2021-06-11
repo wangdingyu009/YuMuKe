@@ -1,0 +1,130 @@
+// pages/coursescore/coursescore.js
+const { courseScore } = require('../../utils/api')
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    index: 0, // 顶部下拉框的索引值
+    currentIndex: -1, // 点击标题栏的索引
+    array: [
+      {
+        name: '全部'
+      },
+      {
+        name: '2020年春季'
+      },
+      {
+        name: '2020年夏季'
+      },
+      {
+        name: '2020年秋季'
+      },
+      {
+        name: '2020年冬季'
+      },
+    ], // 底部弹出框
+    list: [{
+      course: '英语',
+      score: 59,
+    },{
+      course: '语文',
+      score: 136,
+    },{
+    course: '数学',
+    score: 99.5
+  }], // 分数详情
+  },
+
+  // 点击标题栏触发，英语 89
+  titleColumn(e) {
+    console.log(e,'item')
+    let index = e.currentTarget.dataset.index
+    if (this.data.currentIndex === index) {
+      this.setData({
+        currentIndex: -1
+      })
+      return
+    }
+    console.log(index,'index')
+    this.setData({
+      currentIndex: index
+    })
+  },
+// 点击下拉框触发
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
+  async init() {
+    let params = {
+
+    }
+    let res = await courseScore(params)
+    console.log(res,'课程成绩列表')
+    if (res.code === 1) {
+      list: res.data
+    }
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.init()
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

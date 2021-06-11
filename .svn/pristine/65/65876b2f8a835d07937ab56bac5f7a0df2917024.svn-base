@@ -1,0 +1,37 @@
+<!--pages/roomapply/roomapply.wxml教师申请-->
+<view class="head">
+  <view class="week-l">
+    <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+          <view class="pickermethod">
+            {{zhouci[zhouciIndex]}}
+          </view>
+        </picker>
+        <image bindtap="zhouciChange" src="/images/dropdown.png"></image>
+      </view>
+  <view class="week-r">
+    <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+          <view class="pickermethod">
+            {{xingqi[xingqiIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+  </view>
+</view>
+<!-- 列表 -->
+<view class="list">
+  <view class="layer" bindtap="goDetail">
+    <view class="item-t">借用原因的内容展示在这借用原因的内容展示在这借用原因的内容展示在这</view>
+    <view class="item-b">申请时间：2020-09-16</view>
+    <view class="apply-status">已通过</view>
+  </view>
+  <view class="layer">
+    <view class="item-t">借用原因的内容展示在这借用原因的内容展示在这借用原因的内容展示在这</view>
+    <view class="item-b">申请时间：2020-09-16</view>
+    <view class="apply-status red">未通过</view>
+  </view>
+  <view class="layer">
+    <view class="item-t">借用原因的内容展示在这借用原因的内容展示在这借用原因的内容展示在这</view>
+    <view class="item-b">申请时间：2020-09-16</view>
+    <view class="apply-status blue">待审批</view>
+  </view>
+</view>

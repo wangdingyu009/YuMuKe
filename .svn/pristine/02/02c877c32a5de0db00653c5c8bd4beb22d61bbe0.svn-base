@@ -1,0 +1,116 @@
+<!--pages/switchapplyinfo/switchapplyinfo.wxml-->
+<view class="info">
+  <view class="reason">
+    <view class="state">待审批</view>
+    <view class="title">原因</view>
+    <view class="con">肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛</view>
+  </view>
+  <view class="layer">
+    <view class="intro">
+      <view class="item">
+        <view class="left">类型</view>
+        <view class="right">调课</view>
+      </view>
+      <view class="item">
+        <view class="left">课程号</view>
+        <view class="right">19320625035</view>
+      </view>
+      <view class="item">
+        <view class="left">课程名</view>
+        <view class="right">语文</view>
+      </view>
+      <view class="item">
+        <view class="left">课序号</view>
+        <view class="right">2493674923</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人</view>
+        <view class="right">张三</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人电话</view>
+        <view class="right">19252926954</view>
+      </view>
+      <view class="item">
+        <view class="left">代课人</view>
+        <view class="right">王五</view>
+      </view>
+      <view class="item">
+        <view class="left">代课人电话</view>
+        <view class="right">19120821423</view>
+      </view>
+      <view class="item">
+        <view class="left">总学时</view>
+        <view class="right">4</view>
+      </view>
+      <view class="item">
+        <view class="left">其他学时</view>
+        <view class="right">3</view>
+      </view>
+      <view class="item">
+        <view class="left">合班</view>
+        <view class="right">查看合班</view>
+      </view>
+      <view class="item">
+        <view class="left">要求</view>
+        <view class="right">学生党团活动学生党团活动学生党团活动学生党团活动</view>
+      </view>
+      <view class="item">
+        <view class="left">备注</view>
+        <view class="right">学生党团活动学生党团活动</view>
+      </view>
+    </view>
+    <!-- 代课信息 -->
+    <view class="time">
+      <view class="title">
+        代课信息
+      </view>
+      <view class="desc-info">
+        <view class="cycle">
+          <view class="title-l">周次</view>
+          <view class="con">第1-17周</view>
+        </view>
+        <view class="week">
+          <view class="title-l">星期</view>
+          <view class="con">星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">节次</view>
+          <view class="con"> 2-3节A</view>
+        </view>
+        <view class="room">
+          <view class="title-l">教师</view>
+          <view class="con">化工北楼阿012</view>
+        </view>
+      </view>
+      <view class="desc-info">
+        <view class="cycle">
+          <view class="title-l">周次</view>
+          <view class="con">第1-17周</view>
+        </view>
+        <view class="week">
+          <view class="title-l">星期</view>
+          <view class="con">星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">节次</view>
+          <view class="con"> 2-3节A</view>
+        </view>
+        <view class="room">
+          <view class="title-l">教师</view>
+          <view class="con">化工北楼阿012</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="padding-left: 32rpx;padding-right: 32rpx;">
+    <view class="accessory">
+      <view class="left">附件</view>
+      <view class="right">关于林语堂楼A402.txt</view>
+    </view>
+    <view class="liucheng">
+      <view>流程</view>
+      
+    </view>
+  </view>
+</view>

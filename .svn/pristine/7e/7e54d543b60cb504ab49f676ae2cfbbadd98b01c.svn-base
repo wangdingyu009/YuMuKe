@@ -1,0 +1,47 @@
+/* pages/currenttask/currenttask.wxss */
+page {
+  background: #F5F5F6;
+}
+
+.current {
+  padding: 24rpx 32rpx;
+}
+
+.desc {
+  padding: 28rpx 24rpx;
+  background: #FFF;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 16rpx;
+}
+
+.left {
+  width: 72rpx;
+}
+
+.left image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 566rpx;
+  font-size: 32rpx;
+  color: #333336;
+  font-weight: 500;
+}
+
+.right .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.right .number {
+  font-size: 28rpx;
+  color: #99999C;
+  font-weight: 400;
+}

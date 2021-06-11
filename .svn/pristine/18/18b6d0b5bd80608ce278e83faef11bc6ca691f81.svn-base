@@ -1,0 +1,60 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 10:50:32
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-23 18:17:53
+-->
+<!--pages/info/info.wxml消息页-->
+<view class="info">
+  <view class="lines"></view>
+  <view class="layer">
+    <view class="list-item" bindtap="detialTap">
+      <image class="item-l" src="/images/gonggao.png"></image>
+      <view class="item-r">
+        <view class="top">
+          <view class="top-l">公告</view>
+          <view class="top-r">2020-10-03</view>
+        </view>
+        <view class="bottom">
+          <view class="bottom-l">
+            您申请的林语堂楼A402教室已通过赶您申请的林语堂楼A402教室已通过赶您申请的林语堂楼A402教室已通过赶
+          </view>
+          <view class="bottom-r">9</view>
+        </view>
+      </view>
+    </view>
+    <view class="list-item" bindtap="detialTap">
+      <image class="item-l" src="/images/tongzhi.png"></image>
+      <view class="item-r">
+        <view class="top">
+          <view class="top-l">通知</view>
+          <view class="top-r">2020-10-03</view>
+        </view>
+        <view class="bottom">
+          <view class="bottom-l">
+            您申请的林语堂楼A402教室已通过赶您申请的林语堂楼A402教室已通过赶您申请的林语堂楼A402教室已通过赶
+          </view>
+          <view class="bottom-r">9</view>
+        </view>
+      </view>
+    </view>
+    <view class="list-item" bindtap="detialTap">
+      <image class="item-l" src="/images/xitong.png"></image>
+      <view class="item-r">
+        <view class="top">
+          <view class="top-l">系统</view>
+          <view class="top-r">2020-10-03</view>
+        </view>
+        <view class="bottom">
+          <view class="bottom-l">
+            您申请的林语堂楼A402教室已通过赶您申请的林语堂楼A402教室已通过赶您申请的林语堂楼A402教室已通过赶
+          </view>
+          <view class="bottom-r">9</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

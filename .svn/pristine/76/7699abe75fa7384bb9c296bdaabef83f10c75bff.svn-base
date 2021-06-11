@@ -1,0 +1,73 @@
+<!--pages/coursescore/coursescore.wxml课程成绩-->
+<view class="score">
+  <!-- 头部 -->
+  <view class="head">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+      <view class="picker">
+        {{array[index].name}}
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </picker>
+  </view>
+  <!-- 每学期分数 -->
+  <view class="summary">
+    <view class="title">
+      <!-- 这个待定 ，还需要修改 -->
+      <view>{{list[0].yearTerm}}</view>
+    </view>
+
+    <view class="layer">
+
+      <view style="border: 1rpx solid #CCDAFF;border-top:0;">
+        <!-- 循环下面class=desc -->
+        <view class="desc" wx:for="{{list}}" wx:key="index">
+          <view class="item">
+            <view class="top {{item.passed > 0 ? 'red' : ''}}" data-index="{{index}}" bindtap="titleColumn">
+              <view class="top-l">{{item.courseName}}</view>
+              <view class="top-r">{{item.totalScore + '分' || '暂无成绩'}}</view>
+            </view>
+            <!-- 分数下面详情 要控制显示隐藏 -->
+            <view class="{{currentIndex == index ? 'bottom' : 'hidden'}}">
+              <view class="bottom-item">
+                <view class="bottom-item-l">主讲老师</view>
+                <view class="bottom-item-r">{{item.teachers}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">考试性质</view>
+                <view class="bottom-item-r">{{item.examType}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">选课属性</view>
+                <view class="bottom-item-r">{{item.courseType}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">学分</view>
+                <view class="bottom-item-r">{{item.studentCredit}}</view>
+              </view>
+              <!-- <view class="bottom-item">
+                <view class="bottom-item-l">评分</view>
+                <view class="bottom-item-r">80分</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">期末</view>
+                <view class="bottom-item-r">80分</view>
+              </view> -->
+              <view class="bottom-item">
+                <view class="bottom-item-l">总分</view>
+                <view class="bottom-item-r">{{item.totalScore + '分' || '暂无成绩'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">成绩备注</view>
+                <view class="bottom-item-r">{{item.scoreRemark}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,39 @@
+/* pages/aboutus/index.wxss */
+page {
+  background-color: #F5F5F6;
+}
+.about-info {
+  background-color: #fff;
+  padding: 32rpx;
+  margin-bottom: 16rpx;
+}
+.about-info .info {
+  font-size: 28rpx;
+  color: #333336;
+  line-height: 46rpx;
+  letter-spacing: 1rpx;
+}
+.phone {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rpx;
+}
+.phone image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+  display: block;
+}
+.phone .tit {
+  color: #333336;
+  font-weight: 600;
+  font-size: 28rpx;
+}
+.phone-list {
+  padding-bottom: 8rpx;
+}
+.phone-list text {
+  padding-left: 48rpx;
+  font-size: 32rpx;
+  color: #333336;
+}

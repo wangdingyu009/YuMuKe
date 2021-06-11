@@ -1,0 +1,53 @@
+/* pages/Feedback/index.wxss */
+page {
+  background-color: #F5F5F6;
+}
+.feedback {
+  background-color: #fff;
+  padding: 32rpx;
+}
+.feedback-box {
+  background-color: #F5F5F6;
+  padding: 20rpx 24rpx;
+}
+.num {
+  text-align: right;
+  color: #333336;
+  font-size: 28rpx;
+}
+.placeholder-class {
+  color: #CCCCCF;
+  font-size: 28rpx;
+}
+.pass-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32rpx;
+  margin-top: 36rpx;
+}
+.pass-input .label {
+  color: #333336;
+  line-height: 44rpx;
+  font-size: 32rpx;
+  width: 194rpx;
+  margin-right: 28rpx;
+}
+.pass-input input {
+  padding: 0 16rpx;
+  height: 80rpx;
+  background: #F5F5F6;
+  border-radius: 4rpx;
+  flex-grow: 1;
+}
+.btn {
+  width: 100%;
+  background: #5D88FF;
+  border-radius: 8rpx;
+  padding: 28rpx 0;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  margin-top: 88rpx;
+  text-align: center;
+}

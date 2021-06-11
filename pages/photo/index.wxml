@@ -1,0 +1,19 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 16:51:17
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-21 16:58:46
+-->
+<!--pages/photo/index.wxml-->
+<view class="photo">
+  <view class="photo-item">
+    <view class="title">入学照片</view>
+    <image mode="widthFix" src="{{new}}"></image>
+  </view>
+  <view class="photo-item">
+    <view class="title">入学照片</view>
+    <image mode="widthFix" src="{{old}}"></image>
+  </view>
+</view>

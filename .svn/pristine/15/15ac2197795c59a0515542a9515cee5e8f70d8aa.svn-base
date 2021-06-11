@@ -1,0 +1,22 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-23 17:58:43
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-23 18:14:05
+-->
+<!--pages/messagedetial/index.wxml-->
+<view class="message">
+  <view class="title">
+    教室申请通知
+  </view>
+  <view class="time">2018-01-01</view>
+  <view class="content">
+    不市开委面明周何局局马内周定思置四场住活党会党命常指也如看院广四片质合们场干取术较往心世属光次车没界何期型示己你正或门能图明四。两约属段发可料我九都向目看才路习系持车或性边样查去中装细也系上林土至内级那例青号江来。因列会众般立争命等拉问细家存属红行决思该书回石小示情水导压查影平根就名如相路经圆指革据组教指新代级张平口量发土相府可有县。又之华构具近象工来参话米者会土后把起众省种加体反备拉他号类下于部又发任铁反心信种二由力结数只文只少学建何查门。农图名声育住使劳据权步而内选器林之这重说切研育过候音计七相并满；
+  </view>
+</view>
+<view class="file">
+  <view class="label">附件</view>
+  <view class="file-url">www.baidu.com.txt</view>
+</view>

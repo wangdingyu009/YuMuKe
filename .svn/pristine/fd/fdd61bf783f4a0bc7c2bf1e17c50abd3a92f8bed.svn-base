@@ -1,0 +1,60 @@
+<!--pages/watchtaskinfo/watchtaskinfo.wxml-->
+<view class="info">
+  <view style="height:24rpx;"></view>
+  <view class="content">
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_date.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">监考日期</view>
+        <view class="desc">2020年12月18日</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_time.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">考试时间</view>
+        <view class="desc">10:30-11:00</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_kaochang.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">考场</view>
+        <view class="desc">山水文园东园13号楼山水文园83号楼906</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_number.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">课程号</view>
+        <view class="desc">2020</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_class.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">课程名称</view>
+        <view class="desc">新闻与传播学院广院播D电影学院中建科播D电影学院中建科播D电影学院中建科播D电影学院中建科及哲学中外发展历史</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_user.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">是否主考</view>
+        <view class="desc">是</view>
+      </view>
+    </view>
+  </view>
+</view>

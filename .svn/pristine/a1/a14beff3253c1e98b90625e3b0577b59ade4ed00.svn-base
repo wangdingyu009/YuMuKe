@@ -1,0 +1,75 @@
+<!--pages/teachtaskinfo/teachtaskinfo.wxml教学任务详情-->
+<view class="info">
+  <view class="course">
+    <!-- <view class="desc">
+      <view class="title">课程号</view>
+      <view class="content">yu468247234234</view>
+    </view> -->
+    <view class="desc">
+      <view class="title-t">课程号</view>
+      <view class="content">{{detail.pcourseId}}</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课程名</view>
+      <view class="content">{{detail.courseName}}</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课序号</view>
+      <view class="content">{{detail.cseq}}</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">是否主讲</view>
+      <view class="content">{{detail.director}}</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">考试性质</view>
+      <view class="content">{{detail.examNature}}</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课程班性质</view>
+      <view class="content">{{detail.compulsion}}</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课程班别名</view>
+      <view class="content">{{detail.courseClassAlias}}</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">选课人数</view>
+      <view class="content">{{detail.amount}}人 <text bindtap="curriculavariable" class="view-all">查看全部</text></view>
+    </view>
+    <view class="line"></view>
+    <view class="desc">
+      <view class="title-t">合班</view>
+      <view class="content"><text class="view-all" bindtap="viewinclass">查看合班</text></view>
+    </view>
+    <view class="desc">
+      <view class="title-t">备注</view>
+      <view class="content">{{detail.memo}}</view>
+    </view>
+
+  </view>
+  <!-- 上课时间地点 -->
+  <view class="time">
+    <view class="title">
+      上课时间地点
+    </view>
+    <view class="desc-info" wx:for="{{detail.courseArrangement}}" wx:key="index" >
+      <view class="cycle">
+        <view class="title-l">周次</view>
+        <view class="con">{{item.termWeeks}}</view>
+      </view>
+      <view class="week">
+        <view class="title-l">星期</view>
+        <view class="con">{{item.weeks}}</view>
+      </view>
+      <view class="section">
+        <view class="title-l">节次</view>
+        <view class="con"> {{item.sectionName}}</view>
+      </view>
+      <view class="room">
+        <view class="title-l">教室</view>
+        <view class="con">{{item.roomName}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,78 @@
+/* pages/supplytaskinfo/supplytaskinfo.wxss */
+page {
+  background: #F5F5F6;
+}
+
+.info {
+  padding: 24rpx 32rpx;
+}
+
+.desc {
+  min-height: 188rpx;
+  padding: 32rpx 28rpx;
+  background: #FFF;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 16rpx;
+}
+
+.number, .name, .teach {
+  font-size: 32rpx;
+  display: flex;
+  justify-content: start;
+}
+
+.left {
+  width: 128rpx;
+  color: #99999C;
+}
+
+.right {
+  width: 502rpx;
+  color: #333336;
+}
+
+/* 上课时间地点 */
+.time {
+  background: #fff;
+  margin-top: 16rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  border-radius: 16rpx;
+  padding-bottom: 32rpx;
+}
+
+.title {
+  height: 98rpx;
+  line-height: 98rpx;
+  font-weight: 600;
+  color: #33333C;
+}
+
+.desc-info {
+  height: 172rpx;
+  background: rgba(93, 136, 255, 0.12);
+  border-radius: 8rpx;
+  padding: 24rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+
+.cycle, .week, .section, .room {
+  display: flex;
+  justify-content: start;
+}
+
+.title-l {
+  color: #99999C;
+  width: 76rpx;
+}
+
+.con {
+  color: #333336;
+  width: 498rpx;
+}

@@ -1,0 +1,55 @@
+/* pages/mymessage/index.wxss */
+.my-message {
+  padding: 32rpx;
+}
+.message-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48rpx;
+}
+.msg-left {
+  width: 92rpx;
+  position: relative;
+}
+.msg-left image {
+  width: 92rpx;
+  height: 92rpx;
+}
+.msg-left .spot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 10rpx;
+  background-color: #FF5D5D;
+}
+.msg-right {
+  margin-left: 32rpx;
+  flex-grow: 1;
+}
+.msg-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.msg-top .name {
+  font-weight: 600;
+  color: #333336;
+  font-size: 32rpx;
+  line-height: 44rpx;
+}
+.msg-top .time {
+  color: #99999C;
+  font-size: 24rpx;
+}
+.desc {
+  color: #99999C;
+  font-size: 28rpx;
+  margin-top: 4rpx;
+  line-height: 44rpx;
+  display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
+}

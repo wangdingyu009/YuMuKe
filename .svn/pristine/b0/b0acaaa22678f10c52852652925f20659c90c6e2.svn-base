@@ -1,0 +1,22 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-23 17:58:43
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-23 18:14:05
+-->
+<!--pages/messagedetial/index.wxml-->
+<view class="message">
+  <view class="title">
+    {{detail.SUBJECT}}
+  </view>
+  <view class="time">{{detail.SHOWDATE}}</view>
+  <view class="content">
+    {{detail.CONTENT}}
+  </view>
+</view>
+<view wx:for="{{detail.attachments}}" data-name="{{item.fileName}}" data-url="{{item.fileUrl}}" wx:key="index" bindtap="downFile" class="file">
+  <view class="label">附件</view>
+  <view class="file-url">{{item.fileName}}</view>
+</view>

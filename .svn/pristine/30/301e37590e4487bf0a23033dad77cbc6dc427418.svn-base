@@ -1,0 +1,60 @@
+<!--pages/watchtaskinfo/watchtaskinfo.wxml-->
+<view class="info">
+  <view style="height:24rpx;"></view>
+  <view class="content">
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_date.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">监考日期</view>
+        <view class="desc">{{desc.invigilateDate}}</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_time.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">考试时间</view>
+        <view class="desc">{{desc.startTime}}-{{desc.endTime}}</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_kaochang.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">考场</view>
+        <view class="desc">{{desc.roomName}}</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_number.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">课程号</view>
+        <view class="desc">{{desc.pcourseId}}</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_class.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">课程名称</view>
+        <view class="desc">{{desc.courseName}}</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">
+        <image src="/images/icon_user.png"></image>
+      </view>
+      <view class="right">
+        <view class="title">是否主考</view>
+        <view class="desc">{{desc.isPrimary == 0 ? '否' : '是'}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 17:29:50
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-21 17:54:51
+-->
+<!--pages/contactus/index.wxml-->
+<view class="contact-us">
+  <view class="contact-us-list" wx:for="{{list}}" wx:key="{{index}}" bindtap="jumpTap" data-type="{{item.type}}">
+    <text>{{item.name}}</text>
+    <image src="/images/more.png"></image>
+  </view>
+</view>

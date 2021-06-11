@@ -1,0 +1,142 @@
+/*
+ * @Description: request
+ * @Version: 2.0
+ * @Autor: yanghui
+ * @Date: 2020-07-22 15:32:53
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-07-25 11:13:08
+ */ 
+import { BASE_URL } from './config'
+import { buildSign, createTimestamp } from './util'
+const request = (url, data = {}, method = 'GET') => {
+	return new Promise((resolve, reject) => {
+		try {
+			wx.request({
+				method,
+				url: BASE_URL + url,
+				timeout: 15000,
+				dataType: 'json',
+				data: data,
+				header: {
+					'content-type': 'application/json;charset=utf-8', // 默认值
+				},
+				success(res) {
+					resolve(res.data);
+				},
+				fail(res) {
+					resolve({
+						code: 500,
+						message: res.message,
+						data: ''
+					});
+				}
+			});
+		} catch (error) {
+			resolve({
+				code: 500,
+				message: error.message,
+				data: ''
+			});
+			// 异常处理
+		}
+	});
+};
+
+const request1 = (url, data = {}, method = 'GET') => {
+	return new Promise((resolve, reject) => {
+		try {
+			wx.request({
+				method,
+				url: BASE_URL + url,
+				timeout: 15000,
+				dataType: 'json',
+				data: data,
+				header: {
+					'content-type': 'application/json;charset=utf-8', // 默认值
+				},
+				success(res) {
+					wx.getSystemInfo({
+						success: (r) => {
+							// console.log(r,'system')
+							// console.log(r.system.substring(0,1),'a or i')
+							if (r.system.substring(0,1) === 'A') {
+								// console.log('android', res.header['SET-COOKIE'])
+								wx.setStorageSync("sessionid", res.header['SET-COOKIE'])
+								resolve(res.data);
+							}
+							if (r.system.substring(0,1) === 'i') {
+								// console.log('ios', res.header['Set-Cookie'].split(',')[0],res.header)
+								// 浏览器里用res.header['SET-COOKIE']
+								wx.setStorageSync("sessionid", res.header['Set-Cookie'].split(',')[0])
+								resolve(res.data);
+							}
+							// console.log(wx.getStorageSync('sessionid'),'sessionid')
+							// console.log(res.header,'header')
+							// console.log(res.header['Set-Cookie'].split(',')[0],'shoujia', typeof res.header['Set-Cookie'])
+							// console.log(res.header["SET-COOKIE"],'请求头') // 请求头
+							// res.header["SET-COOKIE"] 设置这个可以在安卓机使用正常
+							//  wx.setStorageSync("sessionid", res.header['Set-Cookie'].split(',')[0])
+							// resolve(res.data);
+						}
+					})
+				},
+				fail(res) {
+					resolve({
+						code: 500,
+						message: res.message,
+						data: ''
+					});
+				}
+			});
+		} catch (error) {
+			resolve({
+				code: 500,
+				message: error.message,
+				data: ''
+			});
+			// 异常处理
+		}
+	});
+};
+
+const request2 = (url, data = {}, method = 'GET', cookie='') => {
+	return new Promise((resolve, reject) => {
+    data = data || {};
+		try {
+			wx.request({
+				method,
+				url: BASE_URL + url,
+				timeout: 15000,
+				dataType: 'json',
+				data: data,
+				header: {
+					'content-type': 'application/json;charset=utf-8', // 默认值
+					'cookie': cookie
+				},
+				success(res) {
+					resolve(res.data);
+				},
+				fail(res) {
+					resolve({
+						code: 500,
+						message: res.message,
+						data: ''
+					});
+				}
+			});
+		} catch (error) {
+			resolve({
+				code: 500,
+				message: error.message,
+				data: ''
+			});
+			// 异常处理
+		}
+	});
+};
+
+module.exports = {
+	request,
+	request1,
+	request2
+};

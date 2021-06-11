@@ -1,0 +1,18 @@
+<view class="container">
+  <!-- <view class="title">登录</view> -->
+  <view class="layer">
+    <image mode="aspectFill" class="bg" src="/images/bgcolor.png"></image>
+    <view class="content">
+      <image src="/images/login-logo.png"></image>
+      <view>优慕课教育</view>
+    </view>
+    <view class="bottom-btn">
+      <view bindtap="goLogin" class="account">
+        账号登录
+      </view>
+      <view class="wechat">
+        微信登录
+      </view>
+    </view>
+  </view>
+</view>

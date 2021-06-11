@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-segment": "lin-ui/segment/index",
+    "l-segment-item": "lin-ui/segment-item/index"
+  },
+  "navigationBarTitleText": "课程课表",
+  "navigationBarBackgroundColor": "#FFF"
+}

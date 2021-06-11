@@ -1,0 +1,41 @@
+<!--pages/supplytaskinfo/supplytaskinfo.wxml代课任务详情-->
+<view class="info">
+  <view class="desc">
+    <view class="number">
+      <view class="left">课程号</view>
+      <view class="right">{{list.pcourseId}}</view>
+    </view>
+    <view class="name">
+      <view class="left">课程名</view>
+      <view class="right">{{list.courseName}}</view>
+    </view>
+    <view class="teach">
+      <view class="left">教师号</view>
+      <view class="right">{{list.userName}}</view>
+    </view>
+  </view>
+  <!-- 上课时间地点 -->
+  <view class="time">
+    <view class="title">
+      上课时间地点
+    </view>
+    <view wx:for="{{list.courseArrangementVoList}}" wx:key="index" class="desc-info">
+      <view class="cycle">
+        <view class="title-l">周次</view>
+        <view class="con">{{item.name}}</view>
+      </view>
+      <view class="week">
+        <view class="title-l">星期</view>
+        <view class="con">{{item.weeks}}</view>
+      </view>
+      <view class="section">
+        <view class="title-l">节次</view>
+        <view class="con"> {{item.sectionName}}</view>
+      </view>
+      <view class="room">
+        <view class="title-l">教室</view>
+        <view class="con">{{item.rname}}</view>
+      </view>
+    </view>
+  </view>
+</view>

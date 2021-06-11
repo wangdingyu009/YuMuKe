@@ -1,0 +1,24 @@
+<!--pages/roomdatequery/roomdatequery.wxml教室时间日期查询-->
+<view class="date-query">
+  <view class="intro">
+    <view class="intro-1"></view>
+    <view class="intro-2">蓝色表示空闲</view>
+    <view class="intro-3"></view>
+    <view class="intro-4">灰色表示已占用</view>
+  </view>
+  <view class="layer">
+    <view bindtap="searchDetail" class="select">
+      忠B06 数位系统电脑
+      <image src="/images/dropdown.png"></image>
+    </view>
+  </view>
+  <view class="title">
+    2020年9月24日 星期六
+  </view>
+  <view class="info">
+    <view class="head">数位电脑系统 忠B06室</view>
+    <view class="con">
+      <view class="square" wx:for="{{square}}" wx:key="index">{{item}}</view>
+    </view>
+  </view>
+</view>

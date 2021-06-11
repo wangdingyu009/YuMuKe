@@ -1,0 +1,41 @@
+<!--pages/curriculavariable/curriculavariable.wxml选课名单-->
+<view class="student">
+  <view class="table">
+    <view class="head">
+      <view>学生姓名</view>
+      <view>学号</view>
+    </view>
+    <view class="desc">
+      <view class="left">张三</view>
+      <view class="right">18111881576</view>
+    </view>
+    <view class="desc">
+      <view class="left">居娟纨</view>
+      <view class="right">18111881576</view>
+    </view>
+    <view class="desc">
+      <view class="left">车青</view>
+      <view class="right">18111881576</view>
+    </view>
+    <view class="desc">
+      <view class="left">余锦宏</view>
+      <view class="right">18111881576</view>
+    </view>
+    <view class="desc">
+      <view class="left">堵家</view>
+      <view class="right">18111881576</view>
+    </view>
+    <view class="desc">
+      <view class="left">帅艳友</view>
+      <view class="right">18111881576</view>
+    </view>
+    <view class="desc">
+      <view class="left">上官涛</view>
+      <view class="right">18111881576</view>
+    </view>
+    <view class="desc">
+      <view class="left">皮萍</view>
+      <view class="right">18111881576</view>
+    </view>
+  </view>
+</view>

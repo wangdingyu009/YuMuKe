@@ -1,0 +1,354 @@
+// pages/courseexamination/courseexamination.js
+const {
+  courseExam
+} = require('../../utils/api')
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    isFixedTitle: false, // 顶部标题是否显示 
+    fixedTitle: '',
+    selectDate: '日期选择',
+    list: [{
+        date: '2020年9月23日 星期六',
+        content: [{
+            value: '新闻与传播学院广史播D电影学院中建科',
+            number: '新闻与传播学院A402',
+            time: '9：00 - 11：30'
+          },
+          {
+            value: '中学生英语水平提高幅度与英文歌曲听唱之间的关系调查中学生英语水平提高幅度与英文歌曲听唱之间的关系调查',
+            number: '新闻与传播学院A402',
+            time: '12：00 - 13：30'
+          }
+        ]
+      },
+      {
+        date: '2020年9月26日 星期三',
+        content: [{
+            value: '新闻与传播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历',
+            number: '新闻与传播学院A402',
+            time: '9：00 - 11：30'
+          },
+          {
+            value: '中学生英语水平提高幅度与英文歌曲听唱之间的关系调查中学生英语水平提高幅度与英文歌曲听唱之间的关系调查',
+            number: '新闻与传播学院A402',
+            time: '12：00 - 13：30'
+          }
+        ]
+      },
+      {
+        date: '2020年9月25日 星期五',
+        content: [{
+            value: '新闻与传播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历',
+            number: '新闻与传播学院A402',
+            time: '9：00 - 11：30'
+          },
+          {
+            value: '中学生英语水平提高幅度与英文歌曲听唱之间的关系调查中学生英语水平提高幅度与英文歌曲听唱之间的关系调查',
+            number: '新闻与传播学院A402',
+            time: '12：00 - 13：30'
+          }
+        ]
+      },
+      {
+        date: '2020年9月25日 星期五',
+        content: [{
+            value: '新闻与传播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历',
+            number: '新闻与传播学院A402',
+            time: '9：00 - 11：30'
+          },
+          {
+            value: '中学生英语水平提高幅度与英文歌曲听唱之间的关系调查中学生英语水平提高幅度与英文歌曲听唱之间的关系调查',
+            number: '新闻与传播学院A402',
+            time: '12：00 - 13：30'
+          }
+        ]
+      }, {
+        date: '2020年9月25日 星期五',
+        content: [{
+            value: '新闻与传播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历播学院广史播D电影学院中建科院及哲学中外发展历',
+            number: '新闻与传播学院A402',
+            time: '9：00 - 11：30'
+          },
+          {
+            value: '中学生英语水平提高幅度与英文歌曲听唱',
+            number: '新闻与传播学院A402',
+            time: '12：00 - 13：30'
+          }
+        ]
+      },
+    ],
+    listHeight: [], // 包含每一个子项的总高度 用来计算固定在头部的标题显示什么
+  },
+
+  // 监听页面滚动距离
+
+  onPageScroll(e) {
+    this.setData({
+      isFixedTitle: true
+    })
+    // list[0][0].examdate + ' ' + list[0][0].week
+    // 日期标题 51 + (多个列表数据每一个136) + 8（上边框）
+    let v = e.scrollTop
+    for (var i = 0; i < this.data.listHeight.length; i++) {
+      let height1 = this.data.listHeight[i]
+      let height2 = this.data.listHeight[i + 1]
+      if (v < 0 ) {
+        this.setData({
+          fixedTitle: this.data.list[0][0].examdate + ' ' + this.data.list[0][0].week
+        })
+      }
+      if (v >= height1 && v <= height2) {
+        this.setData({
+          fixedTitle: this.data.list[i][0].examdate + ' ' + this.data.list[i][0].week
+        })
+      }
+    }
+  },
+
+
+
+  bindPickerChange(e) {
+    console.log(e, '选中日期')
+    this.setData({
+      selectDate: e.detail.value
+    })
+  },
+
+  async init() {
+    let params = {
+
+    }
+    let res = await courseExam(params)
+    let arr = [
+      {
+        depname: "教学实践中心",
+        endTime: "11:30",
+        examdate: "2020年01月13日",
+        id: 14293173,
+        rname: "文302",
+        startTime: "10:00",
+        subject: "思想道德修养与法律基础",
+        userId: 40007,
+        week: "星期一",
+      },
+      {
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月13日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期一",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月13日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期一",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月14日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期二",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月14日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期一",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月15日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期三",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月16日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期一",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月16日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期四",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月17日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期五",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月18日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期一",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月19日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期六",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月19日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期一",
+    },{
+      depname: "教学实践中心",
+      endTime: "11:30",
+      examdate: "2020年01月20日",
+      id: 14293173,
+      rname: "文302",
+      startTime: "10:00",
+      subject: "思想道德修养与法律基础",
+      userId: 40007,
+      week: "星期一",
+    }]
+    console.log(res, '课程考试列表', this.sortClass(arr))
+    let v = this.sortClass(arr)
+    let height = 0
+    let listHeight = []
+    listHeight.push(height)
+    for (var i = 0 ; i < v.length; i++) {
+      height += 59 + v[i].length * 136
+      listHeight.push(height)
+    }
+    console.log(listHeight,'get listHeight')
+    
+    this.setData({
+      list: this.sortClass(arr),
+      listHeight: listHeight
+    })
+
+  },
+
+  // 将数组中相同的元素进行分组
+  sortClass(sortData) {
+    let groupBy = (array, f) => {
+      let groups = {}
+      array.forEach((o) => {
+        let group = JSON.stringify(f(o))
+        groups[group] = groups[group] || []
+        groups[group].push(o)
+      })
+      return Object.keys(groups).map((group) => {
+        return groups[group]
+      })
+    }
+    let sorted = groupBy(sortData, (item) => {
+      return item.examdate // 返回需要分组的对象
+    })
+    return sorted
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    this.init()
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    this.setData({
+      isFixedTitle: false
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

@@ -1,0 +1,19 @@
+<!--pages/synthesize/synthesize.wxml综合审查-->
+<view class="synthesize">
+  <view class="list" wx:for="{{list}}" wx:key="index">
+    <view class="left">
+      <image src="/images/icon_zonghe.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">
+        {{item.checkStandard}}
+      </view>
+      <view class="time">
+        审查时间：{{item.checktime}}
+      </view>
+      <view class="con">
+        {{item.checkResult}}
+      </view>
+    </view>
+  </view>
+</view>

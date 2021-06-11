@@ -1,0 +1,22 @@
+<!--pages/gradeexamination/gradeexamination.wxml等级考试-->
+<view class="grade">
+  <view class="date">
+    <!-- <van-button type="primary">按钮</van-button> -->
+  </view>
+  <view class="layer">
+    <view class="time-table">
+      <view class="left">
+        <view class="title">中学生英语水平提高幅度</view>
+        <view class="time">2018-08-08</view>
+      </view>
+      <view class="right"><view style="height:66rpx;margin:0 auto;">98.5</view></view>
+    </view>
+    <view class="time-table">
+      <view class="left">
+        <view class="title">中学生英语水平提高幅度与中学生英语水平提高幅度与中学生英语水平提高幅度与中学生英语水平提高幅度与中学生英语水平提高幅度与</view>
+        <view class="time">2018-08-08</view>
+      </view>
+      <view class="right"><view style="height:66rpx;margin:0 auto;">98</view></view>
+    </view>
+  </view>
+</view>

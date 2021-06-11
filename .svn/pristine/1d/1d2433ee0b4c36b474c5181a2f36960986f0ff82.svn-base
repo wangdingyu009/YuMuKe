@@ -1,0 +1,15 @@
+<!--pages/confirm/confirm.wxml确认页面-->
+<view class="content">
+  <l-textarea border="{{false}}" maxlength="-1" indicator="{{false}}" bind:lininput="onChangeInputing" value="{{content}}" l-class="set_textarea" placeholder="请输入批准意见" 
+  >
+    </l-textarea>
+</view>
+<view style="height: 98rpx;"></view>
+<view class="bottom">
+  <view bindtap="submit" class="item">
+    确认批准
+  </view>
+</view>
+
+<!-- 轻提示 -->
+<l-toast />

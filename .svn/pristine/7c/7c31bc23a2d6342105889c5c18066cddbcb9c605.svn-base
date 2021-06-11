@@ -1,0 +1,69 @@
+<!--pages/timetable/timeable.wxml-->
+<!-- /* 顶部开始 */ -->
+<view class="head-layer">
+  <view class="head">
+    <view class="week-l-l">
+      <picker class="picker" bindchange="xuenianChange" range-key="showVal" value="{{xuenianIndex}}" range="{{xuenian}}">
+        <view class="pickermethod">
+          {{xuenian[xuenianIndex].showVal}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+    <view class="week-l">
+      <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+        <view class="pickermethod">
+          {{zhouci[zhouciIndex]}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+    <view class="week-r">
+      <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+        <view class="pickermethod">
+          {{xingqi[xingqiIndex] || '当前时间'}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+  </view>
+  <!-- /* 标题开始 */ -->
+  <view class="header-title">
+    <view></view>
+    <view>{{currentXueqiShow}}</view>
+  </view>
+  <!-- /* 标题结束 */ -->
+</view>
+<!-- /* 顶部结束 */ -->
+<view style="height:32px;"></view>
+<!-- /* 列表开始 */ -->
+<view style="padding-left: 32rpx;padding-right:32rpx;">
+  <view class="list">
+  <view style="visibility:hidden;" class="header-title mb-12">
+    <view></view>
+    <view>2020年秋</view>
+  </view>
+  <view class="list-child" wx:for="{{list}}">
+    <view class="top">
+      <view class="top-left">
+        {{item.showDate}} <text>/ {{item.showWeeks}}</text>
+      </view>
+      <view class="top-right">
+        {{item.courseSection}}
+      </view>
+    </view>
+    <view class="middle ellipsis-2">
+    {{item.courseName}}</view>
+    <view class="bottom">
+    教室：{{item.classRoom}}
+    </view>
+  </view>
+</view>
+</view>
+<!-- /* 列表结束 */ -->
+
+<!-- 暂无数据 -->
+<view wx:if="{{list.length == 0}}" class="no-data">
+  <image src="../../images/zanwu.png"></image>
+  <view>暂无数据</view>
+</view>

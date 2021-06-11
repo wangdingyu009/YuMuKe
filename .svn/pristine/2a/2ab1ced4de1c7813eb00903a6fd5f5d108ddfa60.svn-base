@@ -1,0 +1,39 @@
+/* pages/changepassword/index.wxss */
+page {
+  background-color: #F5F5F6;
+}
+.change-password {
+  background-color: #fff;
+  padding: 32rpx;
+}
+.pass-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32rpx;
+}
+.pass-input .label {
+  color: #333336;
+  line-height: 44rpx;
+  font-size: 32rpx;
+  width: 128rpx;
+  margin-right: 28rpx;
+}
+.pass-input input {
+  
+  height: 80rpx;
+  background: #F5F5F6;
+  border-radius: 4rpx;
+  flex-grow: 1;
+}
+.btn {
+  width: 100%;
+  background: #5D88FF;
+  border-radius: 8rpx;
+  padding: 28rpx 0;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  margin-top: 88rpx;
+  text-align: center;
+}

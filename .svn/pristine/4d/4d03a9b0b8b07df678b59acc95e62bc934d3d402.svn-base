@@ -1,0 +1,24 @@
+<!--pages/accountlogin/accountlogin.wxml-->
+<view class="container">
+  <image style="width:750rpx;height:440rpx;" src="/images/login-icon.png"></image>
+  <view class="content">
+    <view class="mobile">
+      <image src="/images/mobile.png"></image>
+      <view class="line"></view>
+      <input bindinput="telChange" value="{{mobile}}" type="text" placeholder="请输入账号" />
+    </view>
+    <view style="margin-top: 32rpx;" class="mobile">
+      <image src="/images/lock.png"></image>
+      <view class="line"></view>
+      <input bindinput="pswChange" value="{{password}}" type="text" placeholder="请输入密码" />
+    </view>
+  </view>
+  <view class="login-btn">
+    <view wx:if="{{!accountDisable}}" bindtap="goLogin">登录</view>
+    <view wx:if="{{accountDisable}}">登录</view>
+    <!-- <view style="margin-top:45rpx;" wx:if="{{!wechatDisable}}" bindtap="goLoginWechat">微信登录</view> -->
+    <!-- <view wx:if="{{wechatDisable}}" style="margin-top:45rpx;">微信登录</view> -->
+  </view>
+</view>
+<!-- 轻提示 -->
+<l-toast />

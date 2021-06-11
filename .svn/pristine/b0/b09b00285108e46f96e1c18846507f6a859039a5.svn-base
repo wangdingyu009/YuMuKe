@@ -1,0 +1,131 @@
+/*
+ * @Description: api
+ * @Version: 2.0
+ * @Autor: yanghui
+ * @Date: 2020-07-22 16:45:03
+ * @LastEditors: xingJing
+ * @LastEditTime: 2020-09-01 18:21:27
+ */
+import {
+  request
+} from './request'
+
+// 截取日期 保留 2020-05-06格式
+let splitDate = function (item) {
+  let date = item.trim()
+  return date.substring(0, 10)
+}
+// 根据日期获取星期几
+let getWeek = function(dateString) {
+  var dateArray = dateString.split("-");
+  var date = new Date(dateArray[0], parseInt(dateArray[1] - 1), dateArray[2]);
+  return "星期" + "日一二三四五六".charAt(date.getDay());
+};
+// 把code传给后台获取信息
+let getCodeByWeixin = (data) => {
+  return request('/app/umooc/login_by_weixin', data, 'post')
+}
+// 登录
+let login = (data) => {
+  return request('/app/umooc/dsUserLogin', data, 'post')
+}
+// 退出登录接口
+let logOut = (data) => {
+  return request('/app/umooc/dsUserLogout', data, 'post')
+}
+// 首页加载数据
+let loadingIndex = (data) => {
+  return request('/app/umooc/home', data, 'get')
+}
+// 消息模块三种类型消息
+let messageModel = (data) => {
+  return request('/app/umooc/message/index', data, 'get')
+}
+let messageModelByType = (data) => {
+  return request('', data, 'get')
+}
+// 课程成绩
+let courseScore = (data) => {
+  return request('/app/umooc/findCourseGradeList', data, 'get')
+}
+// 课程课表
+let courseKebiao = (data) => {
+  return request('/app/umooc/getCourseArrangementList', data, 'get')
+}
+// 课程考试
+let courseExam = (data) => {
+  return request('/app/umooc/findCourseExamList', data, 'get')
+}
+// 监考任务列表
+let jiankaoTask = (data) => {
+  return request('/app/umooc/getInvigilateTaskList', data, 'get')
+}
+// 监考任务详情
+let jiankaoTaskInfo = (data) => {
+  return request('/app/umooc/getInvigilateTaskDetail', data, 'get')
+}
+// 等级考试
+let levelExam = (data) => {
+  return request('/app/umooc/getRankExamList', data, 'get')
+}
+// 校区和教学楼
+let xiaoqu = (data) => {
+  return request('/app/umooc/roomScheduleList', data, 'get')
+}
+// 教室时间
+let roomTime = (data) => {
+  return request('/app/umooc/roomScheduleResultList', data, 'get')
+}
+// 教室搜索
+let searchRoom = (data) => {
+  return request('/app/umooc/searchResRoom', data, 'get')
+}
+// 综合审查
+let zongheQuery = (data) => {
+  return request('/app/umooc/getCheckProjectList', data, 'get')
+}
+// 联系我们
+let concatUs = (data) => {
+  return request('/app/umooc/getContactUs', data, 'get')
+}
+// 联系我们列表
+let concatUsList = (data) => {
+  return request('/app/umooc/getContactUsList', data, 'get')
+}
+// 意见反馈
+let feedBack = (data) => {
+  return request('/app/umooc/postFeedBack', data, 'post')
+}
+// 消息列表
+let messageList = (data) => {
+  return request('/app/umooc/getUserMessage', data, 'get')
+}
+// 代课任务
+let daikeTask = (data) => {
+  return request('/app/umooc/getCourseTransferRecordList', data, 'get')
+}
+
+module.exports = {
+  login,
+  logOut,
+  messageModel,
+  getCodeByWeixin,
+  getWeek,
+  splitDate,
+  loadingIndex,
+  courseScore,
+  courseKebiao,
+  courseExam,
+  jiankaoTask,
+  jiankaoTaskInfo,
+  levelExam,
+  xiaoqu,
+  searchRoom,
+  roomTime,
+  zongheQuery,
+  concatUs,
+  concatUsList,
+  feedBack,
+  messageList,
+  daikeTask
+}

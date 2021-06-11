@@ -1,0 +1,78 @@
+/* pages/mine/mine.wxss */
+.mine {
+  background: #F8F8FA;
+  min-height: 100vh;
+  font-size: 32rpx;
+}
+.personal {
+  width: 670rpx;
+  height: 112rpx;
+  padding-top: 44rpx;
+  padding-bottom: 42rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  background: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+.personal view {
+  height: 112rpx;
+  line-height: 112rpx;
+}
+.p-left {
+  width: 112rpx;
+}
+.p-left image {
+  width: 112rpx;
+  height: 112rpx;
+  border-radius: 50%;
+}
+.p-middle {
+  padding-left: 20rpx;
+  width: 380rpx;
+}
+.p-right {
+  width: 162rpx;
+  display: flex;
+  justify-content: start;
+  font-size: 28rpx;
+  color: #99999C;
+}
+.p-right image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 33rpx;
+}
+
+.list {
+  width: 670rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  background: #FFF;
+  display: flex;
+  justify-content: space-between;
+}
+.l-left {
+  width: 40rpx;
+  height: 40rpx;
+}
+.l-left image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.l-middle {
+  width: 562rpx;
+  padding-left: 20rpx;
+}
+.l-right {
+  width: 48rpx;
+  height: 48rpx;
+}
+.l-right image {
+  width: 48rpx;
+  height: 48rpx;
+}

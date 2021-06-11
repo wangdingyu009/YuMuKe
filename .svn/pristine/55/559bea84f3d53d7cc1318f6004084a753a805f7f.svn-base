@@ -1,0 +1,54 @@
+<!--pages/switchapply/switchapply.wxml调课申请-->
+<view class="head">
+  <view class="week-r">
+    <picker class="picker" bindchange="zhuangtaiChange" value="{{zhuangtaiIndex}}" range="{{zhuangtai}}">
+          <view class="pickermethod">
+            {{zhuangtai[zhuangtaiIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+  </view>
+  <view class="week-l">
+    <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+          <view class="pickermethod">
+            {{zhouci[zhouciIndex]}}
+          </view>
+        </picker>
+        <image bindtap="zhouciChange" src="/images/dropdown.png"></image>
+      </view>
+  <view class="week-r">
+    <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+          <view class="pickermethod">
+            {{xingqi[xingqiIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+  </view>
+  
+</view>
+<view class="apply">
+  <view class="list" bindtap="goDesc">
+    <view class="title">生物药剂学与药物动力学</view>
+    <view class="reason">原因：学生党团活动组织全市代表性的文化艺术学生党团活动组织全市代表性的文化艺术</view>
+    <view class="time">申请时间：2020-09-16</view>
+    <view class="type">调课类型：停课</view>
+  </view>
+  <view class="list">
+    <view class="title">生物药剂学与药物动力学</view>
+    <view class="reason">原因：学生党团活动组织全市代表性的文化艺术学生党团活动组织全市代表性的文化艺术</view>
+    <view class="time">申请时间：2020-09-16</view>
+    <view class="type">调课类型：停课</view>
+  </view>
+  <view class="list">
+    <view class="title">生物药剂学与药物动力学</view>
+    <view class="reason">原因：学生党团活动组织全市代表性的文化艺术学生党团活动组织全市代表性的文化艺术</view>
+    <view class="time">申请时间：2020-09-16</view>
+    <view class="type">调课类型：停课</view>
+  </view>
+</view>
+
+<!-- 暂无数据 -->
+<view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="../../images/zanwu.png"></image>
+    <view>暂无数据</view>
+  </view>

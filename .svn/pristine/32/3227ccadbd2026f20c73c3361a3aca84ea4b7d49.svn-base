@@ -1,0 +1,62 @@
+<!--pages/teachtask/teachtask.wxml教学任务-->
+<view class="teach">
+  <view bindtap="goDetail" class="current-semester">
+    本学期任务
+  </view>
+  <view class="head">
+    <view class="week-l-l">
+      <picker class="picker" bindchange="xuenianChange" range-key="showVal" value="{{xuenianIndex}}" range="{{xuenian}}">
+        <view class="pickermethod">
+          {{xuenian[xuenianIndex].showVal}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+    <view class="week-l">
+      <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+        <view class="pickermethod">
+          {{zhouci[zhouciIndex]}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+    <view class="week-r">
+      <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+        <view class="pickermethod">
+          {{xingqi[xingqiIndex] || '当前时间'}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+  </view>
+  <view class="supply">
+  
+  <view class="list" wx:if="{{list.length > 0}}" bindtap="goDesc" data-eqid="{{item.eqid}}" wx:for="{{list}}" wx:key="index">
+    <view class="date">
+      <view class="left">{{item.showDate}} <text> /  {{item.showWeeks}}</text></view>
+      <view class="right">{{item.courseSection}}</view>
+    </view>
+    <view class="desc">
+      {{item.courseName}}
+    </view>
+    <view class="room">
+      教室：{{item.roomName}}
+    </view>
+    <view wx:if="{{item.courseStatus == '停课'}}"  class="status tingke">
+      停课
+    </view>
+    <view wx:if="{{item.courseStatus == '补课'}}" class="status buke">
+      补课
+    </view>
+    <view wx:if="{{item.courseStatus == '代课'}}" class="status daike">代课</view>
+    <view wx:if="{{item.courseStatus == '调课'}}" class="status tiaoke">调课</view>
+  </view>
+
+  <view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="../../images/zanwu.png"></image>
+    <view>暂无数据</view>
+  </view>
+
+
+</view>
+</view>

@@ -1,0 +1,20 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-22 10:03:10
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-22 13:17:08
+-->
+<!--pages/Feedback/index.wxml-->
+<view class="feedback">
+  <view class="feedback-box">
+    <textarea maxlength="200" value="{{value}}" placeholder-style="placeholder-class" bindinput="bindKeyInput" placeholder="请输入您的宝贵意见" />
+    <view class="num">{{currentNum}}/{{maxNum}}</view>
+  </view>
+  <view class="pass-input">
+    <view class="label">您的联系方式</view>
+    <input confirm-type="done" placeholder-style="placeholder-class" placeholder="请输入您的联系方式" value="{{phone}}"/>
+  </view>
+  <view class="btn">提交</view>
+</view>

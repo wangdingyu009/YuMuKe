@@ -1,0 +1,107 @@
+// pages/teachtask/teachtask.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    xuenian: ['2020年春','2020年夏','2020年秋','2020年冬'],
+    xuenianIndex: 0,
+    zhouci: ['第一周','第二周','第三周','第四周','第五周','第六周','第七周'],
+    zhouciIndex: 0,
+    xingqi: ['星期一','星期二','星期三','星期四','星期五','星期六','星期日'],
+    xingqiIndex: 0
+  },
+
+  // 教学任务详情
+  goDesc() {
+    wx.navigateTo({
+      url: '/pages/teachtaskinfo/teachtaskinfo',
+    })
+  },
+
+  // 本学期任务
+  goDetail() {
+    wx.navigateTo({
+      url: '/pages/currenttask/currenttask',
+    })
+  },
+
+
+  // 学年学期
+  xuenianChange(e) {
+    this.setData({
+      xuenianIndex: e.detail.value
+    })
+  },
+
+  // 第几周
+  xingqiChange(e) {
+    this.setData({
+      xingqiIndex: e.detail.value
+    })
+  },
+  
+  // 星期几
+  zhouciChange(e) {
+    this.setData({
+      zhouciIndex: e.detail.value
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

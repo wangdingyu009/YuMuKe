@@ -1,0 +1,9 @@
+<!--pages/viewinclass/viewinclass.wxml查看合班-->
+<view class="class">
+  <view style="height: 4rpx;"></view>
+  <view class="info">2020级计算机程序与设计1班</view>
+  <view class="info">2020级计算机程序与设计1班</view>
+  <view class="info">2020级计算机程序与设计1班2020级计算机程序与设计1班2020级计算机程序与设计1班</view>
+  <view class="info">2020级计算机程序与设计1班</view>
+  <view class="info">2020级计算机程序与设计1班</view>
+</view>

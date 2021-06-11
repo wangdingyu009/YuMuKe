@@ -1,0 +1,125 @@
+/* pages/index/index.wxss */
+.container {
+  background: #F5F5F6;
+  height: 100vh;
+  overflow-y: auto;
+}
+.bgimg image {
+  width: 750rpx;
+  height: 208rpx;
+}
+
+.swiper-box {
+  margin-top: -184rpx;
+  width: 750rpx;
+  /* padding: 16rpx 32rpx; */
+  height: 282rpx;
+  /* padding-left: 32rpx;
+  padding-right: 32rpx; */
+  box-sizing: border-box;
+  /* background: #fff; */
+  position: relative;
+}
+
+swiper {
+  width: 750rpx;
+  height: 260rpx;
+  border-radius: 10rpx;
+}
+
+.slide-image-box {
+  width: 686rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 260rpx;
+  object-fit: cover;
+  border-radius: 20rpx;
+}
+
+/* 自定义原点 */
+/*用来包裹所有的小圆点  */
+
+.dots {
+  width: 210rpx;
+  height: 20rpx;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12rpx;
+}
+
+/*未选中时的小圆点样式 */
+
+.dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  margin-right: 26rpx;
+  background: #6E98FF;
+  opacity: 0.2899;
+}
+
+/*选中以后的小圆点样式  */
+
+.active {
+  width: 20rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background: #5D88FF;
+  opacity: 1;
+}
+ /* 通告栏 */
+ .layer {
+   width: 686rpx;
+   padding-left: 32rpx;
+   padding-right: 32rpx;
+ }
+ .callboard {
+   width: 100%;
+   /* height: 88rpx; */
+   background: #fff;
+   margin-top: 18rpx;
+   margin-bottom: 20rpx;
+ }
+ .callboard .callboard-item {
+   width: 686rpx !important;
+   background-color: #fff !important;
+ }
+ .text-list {
+   font-size: 28rpx;
+   color: #333336;
+ }
+ /* 宫格 */
+ .grid {
+  width: 686rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+ .grid-item {
+   width: 214rpx;
+   height: 124rpx;
+   padding-top: 48rpx;
+   padding-bottom: 42rpx;
+   background: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-bottom: 22rpx;
+ }
+ .grid-icon {
+   width: 64rpx;
+   height: 64rpx;
+   margin: 0 auto;
+ }
+ .grid-name {
+   font-size: 32rpx;
+   color: #333336;
+   text-align: center;
+ }

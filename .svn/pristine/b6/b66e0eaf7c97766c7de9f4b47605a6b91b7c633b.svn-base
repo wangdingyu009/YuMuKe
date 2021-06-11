@@ -1,0 +1,121 @@
+<!--pages/index/index.wxml首页-->
+<view class="container">
+  <view class="bgimg">
+    <image src="/images/indexbg.png"></image>
+  </view>
+  <!-- 轮播图 -->
+  <view class="swiper-box">
+    <swiper bindchange="swiperChange" indicator-dots="{{indicatorDots}}" circular="{{true}}"
+      indicator-active-color="rgba(110, 152, 255, 1)" indicator-color="rgba(110, 152, 255, .3)" autoplay="{{autoplay}}"
+      interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{bannerList}}" wx:key="index">
+        <swiper-item bindtap="toActivityDetails" data-item="{{item}}">
+          <view class="slide-image-box">
+            <image src="{{item.imageBase64Data}}" class="slide-image" mode="aspectFill" />
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 自定义原点 -->
+    <view class="dots">
+      <block wx:for="{{bannerList}}" wx:key="index">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class="layer">
+    <!-- 通告栏 -->
+    <view class="callboard">
+      <l-notice-bar l-class="callboard-item" front-icon-name="notification" show="{{true}}" type="roll" speed="2000">
+        <text bindtap="infoList" wx:for="{{list}}" wx:key="index" class="text-list">{{item.subject}}</text>
+        <text wx:if="{{list.length < 1}}" class="text-list">暂时没有新消息~</text>
+      </l-notice-bar>
+    </view>
+    <!-- 宫格 -->
+    <view class="grid">
+      <!-- <view wx:for="{{columnArr}}" wx:key="index" class="grid-item" data-title="{{item.title}}" bindtap="viewScore">
+        <image wx:if="{{item.title == '课程成绩'}}" class="grid-icon" src="/images/kechengchengji.png"></image>
+        <image wx:if="{{item.title == '课程课表'}}" class="grid-icon" src="/images/kechengbiao.png"></image>
+        <image wx:if="{{item.title == '课程考试'}}" class="grid-icon" src="/images/kechengkaoshi.png"></image>
+        <image wx:if="{{item.title == '监考任务'}}" class="grid-icon" src="/images/jiankaorenwu.png"></image>
+        <image wx:if="{{item.title == '等级考试'}}" class="grid-icon" src="/images/dengjichaxun.png"></image>
+        <image wx:if="{{item.title == '教室时间'}}" class="grid-icon" src="/images/jiaoshishijian.png"></image>
+        <image wx:if="{{item.title == '综合审查'}}" class="grid-icon" src="/images/zongheshencha.png"></image>
+        <image wx:if="{{item.title == '代课任务'}}" class="grid-icon" src="/images/daikerenwu.png"></image>
+        <image wx:if="{{item.title == '校历查询'}}" class="grid-icon" src="/images/xiaolichaxun.png"></image>
+        <image wx:if="{{item.title == '教学任务'}}" class="grid-icon" src="/images/jiaoxuerenwu.png"></image>
+        <image wx:if="{{item.title == '调课申请'}}" class="grid-icon" src="/images/tiaokeshenqing.png"></image>
+        <image wx:if="{{item.title == '教室申请'}}" class="grid-icon" src="/images/jiaoshishenqing.png"></image>
+        <image wx:if="{{item.title == '调课审批'}}" class="grid-icon" src="/images/tiaokeshenpi.png"></image>
+        <image wx:if="{{item.title == '教室审批'}}" class="grid-icon" src="/images/jiaoshishenppi.png"></image>
+        <image wx:if="{{item.title == '学业预警'}}" class="grid-icon" src="/images/xueyeyujin.png"></image>
+        <view class="grid-name">{{item.title}}</view>
+      </view> -->
+
+
+      <view class="grid-item" bindtap="viewScore">
+        <image class="grid-icon" src="/images/kechengbiao.png"></image>
+        <view class="grid-name">课程成绩</view>
+      </view>
+      <view class="grid-item" bindtap="goTimetable">
+        <image class="grid-icon" src="/images/kechengbiao.png"></image>
+        <view class="grid-name">课程课表</view>
+      </view>
+      <view class="grid-item" bindtap="goExamination">
+        <image class="grid-icon" src="/images/kechengkaoshi.png"></image>
+        <view class="grid-name">课程考试</view>
+      </view>
+      <view bindtap="goWatchTask" class="grid-item">
+        <image class="grid-icon" src="/images/jiankaorenwu.png"></image>
+        <view class="grid-name">监考任务</view>
+      </view>
+      <view bindtap="gogradeexamination" class="grid-item">
+        <image class="grid-icon" src="/images/dengjichaxun.png"></image>
+        <view class="grid-name">等级考试</view>
+      </view>
+      <view bindtap="goRoomTime" class="grid-item">
+        <image class="grid-icon" src="/images/jiaoshishijian.png"></image>
+        <view class="grid-name">教室时间</view>
+      </view>
+      <view bindtap="goSynthesize" class="grid-item">
+        <image class="grid-icon" src="/images/zongheshencha.png"></image>
+        <view class="grid-name">综合审查</view>
+      </view>
+      <view bindtap="goSupply" class="grid-item">
+        <image class="grid-icon" src="/images/daikerenwu.png"></image>
+        <view class="grid-name">代课任务</view>
+      </view>
+      <view class="grid-item" bindtap="schoolCalendar">
+        <image class="grid-icon" src="/images/xiaolichaxun.png"></image>
+        <view class="grid-name">校历查询</view>
+      </view>
+      <view bindtap="goTeachTask" class="grid-item">
+        <image class="grid-icon" src="/images/jiaoxuerenwu.png"></image>
+        <view class="grid-name">教学任务</view>
+      </view>
+      <view bindtap="switchapply" class="grid-item">
+        <image class="grid-icon" src="/images/tiaokeshenqing.png"></image>
+        <view class="grid-name">调课申请</view>
+      </view>
+      <view bindtap="roomapply" class="grid-item">
+        <image class="grid-icon" src="/images/jiaoshishenqing.png"></image>
+        <view class="grid-name">教室申请</view>
+      </view>
+      <view bindtap="courseExamine" class="grid-item">
+        <image class="grid-icon" src="/images/tiaokeshenpi.png"></image>
+        <view class="grid-name">调课审批</view>
+      </view>
+      <view bindtap="roomapprove" class="grid-item">
+        <image class="grid-icon" src="/images/jiaoshishenppi.png"></image>
+        <view class="grid-name">教室审批</view>
+      </view>
+      <view bindtap="studyWarn" class="grid-item">
+        <image class="grid-icon" src="/images/xueyeyujin.png"></image>
+        <view class="grid-name">学业预警</view>
+      </view>
+    
+    </view>
+  </view>
+
+
+</view>

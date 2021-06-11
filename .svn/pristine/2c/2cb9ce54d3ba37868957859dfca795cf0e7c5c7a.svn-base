@@ -1,0 +1,26 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 17:46:38
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-21 18:16:40
+-->
+<!--pages/aboutus/index.wxml-->
+<view class="about-us">
+  <view class="about-info">
+    <view class="info">
+      优慕课在线教育科技(北京)有限责任公司是国家高新技术企业，公司于2014年底由原清华大学教育技术研究所数字化学习研究与应用中心改制成立 ，“清华教育在线”系列科研成果和技术支持团队转入公司。目前公司已经拥有多项自主知识产权软件产品。公司团队已历经18年数字化学习平台和教学管理系统的研究、设计、开发、应用、评价历程，参与500余所院校教育信息化项目建设,对促进院校教学改革起到了重要推动作用。
+    </view>
+  </view>
+  <view class="about-info">
+    <view class="phone">
+      <image src="/images/icon_phone.png"></image>
+      <text class="tit">我们的联系电话</text>
+    </view>
+    <view class="phone-list">
+      <text>13120392938</text>
+      <text>0319 - 31934837</text>
+    </view>
+  </view>
+</view>

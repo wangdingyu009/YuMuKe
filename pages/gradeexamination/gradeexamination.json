@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-button": "/vant/button/index"
+  },
+  "navigationBarTitleText": "等级考试",
+  "navigationBarBackgroundColor": "#FFF"
+}

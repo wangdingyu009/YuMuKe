@@ -1,0 +1,49 @@
+<!--pages/roomapply/roomapply.wxml教师申请-->
+<view class="head">
+  <!-- <view class="week-r">
+    <picker class="picker" bindchange="zhuangtaiChange" value="{{zhuangtaiIndex}}" range="{{zhuangtai}}">
+          <view class="pickermethod">
+            {{zhuangtai[zhuangtaiIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+  </view> -->
+  <view class="week-l">
+    <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+          <view class="pickermethod">
+            {{zhouci[zhouciIndex]}}
+          </view>
+        </picker>
+        <image bindtap="zhouciChange" src="/images/dropdown.png"></image>
+      </view>
+  <view class="week-r">
+    <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+          <view class="pickermethod">
+            {{xingqi[xingqiIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+  </view>
+</view>
+<!-- 列表 -->
+<view class="list" wx:if="{{list.length > 0}}">
+  <view class="layer" wx:for="{{list}}" wx:key="index" data-statusval="{{item.showStatus}}" data-borrowId="{{item.borrowId}}" bindtap="goDetail">
+    <!--item.roomName -->
+    <view class="item-t">{{item.borrowRoomNames}}</view>
+    <view class="item-b">教室数量：{{item.recordNum}}间</view>
+    <view class="item-b">总计：{{item.roomNum}}</view>
+    <view class="item-b">申请时间：{{item.borrowTime}}</view>
+    <!-- item.reviewStatus -->
+    <view wx:if="{{item.showStatus == '已通过'}}" class="apply-status">已通过</view>
+    <view wx:if="{{item.showStatus == '已拒绝'}}" class="apply-status red">已拒绝</view>
+    <view wx:if="{{item.showStatus == '待审批'}}" class="apply-status blue">待审批</view>
+    <view wx:if="{{item.showStatus == '未提交'}}" class="apply-status yellow">未提交</view>
+  </view>
+</view>
+
+<!-- 暂无数据 -->
+<view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="../../images/zanwu.png"></image>
+    <view>暂无数据</view>
+  </view>
+<view style="height:16rpx;"></view>

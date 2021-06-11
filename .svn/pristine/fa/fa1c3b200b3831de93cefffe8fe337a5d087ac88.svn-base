@@ -1,0 +1,31 @@
+<!--pages/courseexamination/courseexamination.wxml课程考试-->
+<view class="examination">
+  <!-- 头部 -->
+  <view class="head">
+    <picker bindchange="bindPickerChange" value="{{selectDate}}" mode="date">
+      <view class="picker">
+        {{selectDate}}
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </picker>
+    <view class="lines"></view>
+    <view class="fix-head">2020年9月23日 星期六6</view>
+  </view>
+  <view style="height: 42px;"></view>
+  <!-- 考试时间和地点 -->
+  <view class="layer">
+    <view data-index="{{index}}" class="list {{'list' + index}}" wx:for="{{examinationList}}" wx:key="index">
+      <view class="heads">{{item.date}}</view>
+      <view class="con-info" wx:for="{{item.content}}" wx:key="index">
+        <view class="info-l"></view>
+        <view class="info-r">
+          <view class="top">{{item.value}}</view>
+          <view class="middle">考场：{{item.number}}</view>
+          <view class="bottom">{{item.time}}</view>
+        </view>
+      </view>
+      
+
+    </view>
+  </view>
+</view>

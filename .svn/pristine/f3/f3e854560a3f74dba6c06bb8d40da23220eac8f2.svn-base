@@ -1,0 +1,96 @@
+/* pages/watchtask/watchtask.wxss */
+.watch {
+  min-height: 100vh;
+  background: #F5F5F6;
+}
+
+/* 日期选择 */
+.section {
+  padding-left: 32rpx;
+  width: 750rpx;
+  height: 88rpx;
+  font-size: 32rpx;
+  color: #333336;
+  background: #FFF;
+  display: flex;
+  justify-content: start;
+}
+
+.date-left {
+  padding-right: 20rpx;
+  margin-top: 16rpx;
+  position: relative;
+  width: 240rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border-radius: 28rpx;
+  border: 1rpx solid #CCCCCF;
+  margin-right: 10rpx;
+}
+
+.date-left image, .date-right image {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 2rpx;
+}
+
+.date-right {
+  padding-right: 20rpx;
+  margin-top: 16rpx;
+  position: relative;
+  width: 240rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border-radius: 28rpx;
+  border: 1rpx solid #CCCCCF;
+  margin-right: 10rpx;
+}
+/* 日期选择结束 */
+/* 监考内容 */
+.content {
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+.item {
+  border-left: 4rpx solid #52CBFF;
+  border-radius: 8rpx;
+  margin-top: 16rpx;
+  background: #fff;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 232rpx;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+  font-size: 32rpx;
+  color: #333336;
+}
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+.numbers {
+  display: flex;
+  justify-content: space-between;
+}
+.dates {
+  display: flex;
+  justify-content: space-between;
+}
+.name view:nth-of-type(1), .numbers view:nth-of-type(1), .dates view:nth-of-type(1) {
+  width: 160rpx;
+}
+.name view:nth-of-type(2), .numbers view:nth-of-type(2), .dates view:nth-of-type(2) {
+  width: 466rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

@@ -1,0 +1,94 @@
+<!-- 教室时间查询周次查询-->
+<view style="padding-bottom: 10rpx;" class="timetable">
+  <view class="intro">
+    <view class="intro-1"></view>
+    <view class="intro-2">蓝色表示空闲</view>
+    <view class="intro-3"></view>
+    <view class="intro-4">灰色表示已占用</view>
+  </view>
+  <view class="layer">
+    <view class="select" bindtap="searchDetail">
+      忠B06 数位系统电脑
+      <image src="/images/dropdown.png"></image>
+    </view>
+  </view>
+  <view class="table">
+    <view class="title">
+      <view class="index">课节</view>
+      <view class="table-header">
+        <view class="weeks">星期一</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期二</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期三</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期四</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期五</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期六</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期日</view>
+        <view class="dates">04-23</view>
+      </view>
+    </view>
+    <view class="info">
+      <!-- 左边序号 -->
+      <view class="info-l">
+        <view class="info-index" wx:for="{{leftIndex}}" wx:key="index">{{item.name}}</view>
+      </view>
+      <!-- 右边课程 -->
+      <view class="info-r">
+        <!-- 周一 -->
+        <view class="info-r-1 info-child">
+          <!-- 判断状态 正常 停课 补课 到时候循环 设置距离顶部的距离 -->
+          <!-- <view style="z-index:100000;position:absolute;left: 0;top: 108rpx; color: #fff;font-size:24rpx;text-align: center;background: red;width: 94rpx;height:32rpx;line-height: 32rpx;border-radius: 14rpx 14rpx 8rpx 8rpx;border: 2rpx solid #FFFFFF;background: #FF5D5D;">停用</view> -->
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index">
+              <image src="/images/jiaoshi.png"></image>
+          </view>
+          
+        </view>
+        <!-- 周二 -->
+        <view class="info-r-2 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index">
+            <image src="/images/jiaoshi_d.png"></image>
+          </view>
+          
+        </view>
+        <!-- 周三 -->
+        <view class="info-r-3 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周四 -->
+        <view class="info-r-4 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周五 -->
+        <view class="info-r-5 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周六 -->
+        <view class="info-r-6 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周日 -->
+        <view class="info-r-7 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

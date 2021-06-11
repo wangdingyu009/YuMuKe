@@ -1,0 +1,39 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 11:39:00
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-26 14:14:07
+-->
+<view class="school-calendar">
+  <view class="top">
+    <view class="top-left">
+      <text>2019-2020学年</text><text>第二学期</text><text>共25周</text>
+    </view>
+    <view class="select-month">
+      <!-- <text>3月</text>
+      <image src="/images/dropdown.png"></image> -->
+    </view>
+  </view>
+  <view class="calendar-box">
+    <view class="calendar">
+      <view class="week">
+        <view class="week-title">周次</view>
+        <view wx:for="{{week}}" class="week-list">
+          {{item.name}}
+        </view>
+      </view>
+      <view class="days">
+        <calendar  txtlist='{{txtlist}}' txt_style='{{txt_style}}' speciallist='{{speciallist}}' pitch_on="circle" active-colort="active-colort" active-coloro="active-coloro" mystatus='{{mystatus}}' week_type="{{weekType}}" circle_show="{{true}}" bindselectDate="selectDate"/>
+      </view>
+    </view>
+    <view class="list">
+      <view class="list-item " wx:for="{{list}}" colored="#333336" style='border-left: 4rpx solid {{item.color}}'>
+          <text>{{item.name}}</text>
+          <image src="/images/more.png"></image>
+        </view>
+      </view>
+    </view>
+  
+</view>

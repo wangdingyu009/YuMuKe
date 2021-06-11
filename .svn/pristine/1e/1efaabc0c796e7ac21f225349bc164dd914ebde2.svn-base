@@ -1,0 +1,214 @@
+/*
+ * @Description: api
+ * @Version: 2.0
+ * @Autor: yanghui
+ * @Date: 2020-07-22 16:45:03
+ * @LastEditors: xingJing
+ * @LastEditTime: 2020-09-01 18:21:27
+ */ 
+import { request, request1, request2 } from './request'
+// 几天前
+let getDateDiff =  function(time) {
+  // 当前时间
+  var nowTime = new Date();
+  var day = nowTime.getDate();
+  var hours = parseInt(nowTime.getHours());
+  var minutes = nowTime.getMinutes();
+  // 传来time 2018-05-25 18:14:02 分解
+  var timeday = time.substring(8, 10);
+  var timehours = parseInt(time.substring(11, 13));
+  var timeminutes = time.substring(14, 16);
+  var d_day = Math.abs(day - timeday);
+  var d_hours = hours - timehours;
+  var d_minutes = Math.abs(minutes - timeminutes);
+  if (d_day <= 1) {
+    switch (d_day) {
+      case 0:
+        if (d_hours == 0 && d_minutes > 0) {
+          return d_minutes + '分钟前';
+        } else if (d_hours == 0 && d_minutes == 0) {
+          return '1分钟前';
+        } else {
+          return d_hours + '小时前';
+        }
+        break;
+      case 1:
+        if (d_hours < 0) {
+          return (24 + d_hours) + '小时前';
+        } else {
+          return d_day + '天前';
+        }
+        break;
+    }
+  } else if (d_day > 1 && d_day < 10) {
+    return d_day + '天前';
+  } else {
+    return time.substring(0, 10);
+  }
+}
+
+// 截取日期 保留 2020-05-06格式
+let  splitDate = function(item) {
+  let date = item.trim()
+  return date.substring(0,10)
+}
+
+// 首页推荐
+let recommentIndex = (data) => {
+  return request('/app/article/api/getRecommentArticleList.do', data, 'post')
+}
+// 发布活动
+let goPublish = (data) => {
+  return request('/app/article/api/newOrUpdateArticle.do', data, 'post')
+}
+
+// 添加关注
+let addGuanzhu = (data) => {
+  return request('/app/follow/add.do', data, 'post')
+}
+
+// 取消关注
+let cancelGuanzhu = (data) => {
+  return request('/app/follow/cancel.do', data, 'post')
+}
+
+// 收藏
+let collect = (data) => {
+  return request('/app/collect/add.do', data, 'post')
+}
+
+// 取消收藏
+let uncollect = (data) => {
+  return request('/app/collect/cancel.do', data, 'post')
+}
+
+// 发布留言
+let pulishMess = (data) => {
+  return request('/app/usercomment/add.do', data, 'post')
+}
+
+// 获取验证码
+let getCode = (data) => {
+  return request1('/u/getVerifyPhoneCode.do', data, 'get')
+}
+
+// 登录
+let login = (data, cookie) => {
+  return request2('/app/userLogin/login.do', data, 'post',cookie)
+}
+
+// 推荐首页 关注列表
+let myFavorList = (data) => {
+  return request('/app/article/api/getFollowArticleList.do', data, 'post')
+}
+
+// 活动详情页
+let info = (data) => {
+  return request('/app/article/api/articleInfoById.do', data, 'post')
+}
+
+// 点赞
+let goFavor = (data) => {
+  return request('/app/thumbsup/add.do', data, 'post')
+}
+
+// 活动的评论列表
+let recommentList = (data) => {
+  return request('/app/usercomment/artCommentList.do', data, 'post')
+}
+
+// 获取用户信息
+let userInfo = (data) => {
+  return request('/app/authuser/info.do', data, 'post')
+}
+
+// 添加反馈
+let addFeedback = (data) => {
+  return request('/app/feedback/api/add.do', data, 'post')
+}
+
+// 我的里面 关注 活动 获赞 粉丝的数量
+let numInfo = (data) => {
+  return request('/app/article/api/getUserCount.do', data, 'post')
+}
+
+// 我的 我发布的日志列表
+let myPublishArticle = (data) => {
+  return request('/app/article/api/getMyArticleList.do', data, 'post')
+}
+
+// 我的 我的关注列表
+let myGuanzhu = (data) => {
+  return request('/app/follow/list.do', data, 'post')
+}
+
+// 我的粉丝
+let myFensi = (data) => {
+  return request('/app/follow/fanslist.do', data, 'post')
+}
+
+// 我的 获赞列表
+let myHuozan = (data) => {
+  return request('/app/thumbsup/list.do', data, 'post')
+}
+
+// 邀请码认证
+let invitecode = (data) => {
+  return request('/app/authuser/verifycode.do', data, 'post')
+}
+
+// 申请认证
+let goApprove = (data) => {
+  return request('/app/authuser/certificate.do', data, 'post')
+}
+
+// 获取当日积分
+let getTodayScore = (data) => {
+  return request('/integral/getdaily.do', data, 'post')
+}
+
+// 签到接口
+let goSign = (data) => {
+  return request('/integral/sign.do', data, 'post')
+}
+
+// 获取积分详情 当日积分 几天前的积分
+let getSomedayScore = (data) => {
+  return request('/integral/getIntegralDetail.do', data, 'post')
+}
+
+// 获取收藏列表
+let getCollectionList = (data) => {
+  return request('/app/article/api/getArticleCollectors.do', data, 'post')
+}
+
+module.exports = {
+  getDateDiff,
+  splitDate,
+  getCode,
+  login,
+  recommentIndex,
+  goPublish,
+  addGuanzhu,
+  cancelGuanzhu,
+  collect,
+  uncollect,
+  pulishMess,
+  myFavorList,
+  info,
+  goFavor,
+  recommentList,
+  userInfo,
+  addFeedback,
+  numInfo,
+  myPublishArticle,
+  myGuanzhu,
+  myFensi,
+  myHuozan,
+  invitecode,
+  goApprove,
+  getTodayScore,
+  goSign,
+  getSomedayScore,
+  getCollectionList
+}

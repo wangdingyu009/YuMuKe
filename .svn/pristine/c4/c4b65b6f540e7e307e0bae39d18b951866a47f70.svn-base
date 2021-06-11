@@ -1,0 +1,57 @@
+/*
+ * @Description: api
+ * @Version: 2.0
+ * @Autor: yanghui
+ * @Date: 2020-07-22 16:45:03
+ * @LastEditors: xingJing
+ * @LastEditTime: 2020-09-01 18:21:27
+ */
+import {
+  request
+} from './request'
+
+// 截取日期 保留 2020-05-06格式
+let splitDate = function (item) {
+  let date = item.trim()
+  return date.substring(0, 10)
+}
+// 首页加载数据
+let loadingIndex = (data) => {
+  return request('/app/umooc/index', data, 'get')
+}
+
+// 监考任务列表
+let jiankaoTask = (data) => {
+  return request('/app/umooc/getInvigilateTaskList', data, 'get')
+}
+// 监考任务详情
+let jiankaoTaskInfo = (data) => {
+  return request('/app/umooc/getInvigilateTaskDetail', data, 'get')
+}
+// 等级考试
+let levelExam = (data) => {
+  return request('/app/umooc/getRankExamList', data, 'get')
+}
+// 校区和教学楼
+let xiaoqu = (data) => {
+  return request('/app/umooc/roomScheduleList', data, 'get')
+}
+// 教室时间
+let roomTime = (data) => {
+  return request('/app/umooc/roomScheduleResultList', data, 'get')
+}
+// 综合审查
+let zongheQuery = (data) => {
+  return request('/app/umooc/getCheckProjectList', data, 'get')
+}
+
+module.exports = {
+  splitDate,
+  loadingIndex,
+  jiankaoTask,
+  jiankaoTaskInfo,
+  levelExam,
+  xiaoqu,
+  roomTime,
+  zongheQuery
+}

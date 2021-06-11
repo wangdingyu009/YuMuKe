@@ -1,0 +1,59 @@
+<!--pages/teachtask/teachtask.wxml教学任务-->
+<view class="teach">
+  <view bindtap="goDetail" class="current-semester">
+    本学期任务
+  </view>
+  <view class="head">
+    <view class="week-l-l">
+      <picker class="picker" bindchange="xuenianChange" value="{{xuenianIndex}}" range="{{xuenian}}">
+        <view class="pickermethod">
+          {{xuenian[xuenianIndex]}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+    <view class="week-l">
+      <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+        <view class="pickermethod">
+          {{zhouci[zhouciIndex]}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+    <view class="week-r">
+      <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+        <view class="pickermethod">
+          {{xingqi[xingqiIndex]}}
+        </view>
+      </picker>
+      <image src="/images/dropdown.png"></image>
+    </view>
+  </view>
+  <view class="supply">
+  
+  <view class="list" bindtap="goDesc">
+    <view class="date">
+      <view class="left">4月23日 <text> /  星期五</text></view>
+      <view class="right">1-2节</view>
+    </view>
+    <view class="desc">
+      中学生英语水平提高幅度与英文歌曲听唱之间的关系调查
+    </view>
+    <view class="room">
+      教室：新闻与传播学院A402
+    </view>
+  </view>
+  <view class="list">
+    <view class="date">
+      <view class="left">4月23日 <text> /  星期五</text></view>
+      <view class="right">8-10节</view>
+    </view>
+    <view class="desc">
+      中学生英语水平提高幅度与英文歌曲听唱之间的关系调查
+    </view>
+    <view class="room">
+      教室：新闻与传播学院A402
+    </view>
+  </view>
+</view>
+</view>

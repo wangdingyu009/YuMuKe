@@ -1,0 +1,64 @@
+<!--pages/coursescore/coursescore.wxml课程成绩-->
+<view class="score">
+  <!-- 头部 -->
+  <view class="head">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+      <view class="picker">
+        {{array[index].name}}
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </picker>
+  </view>
+  <!-- 每学期分数 -->
+  <view class="summary">
+    <view class="title">
+      <view>2020年冬</view>
+    </view>
+
+    <view class="layer">
+
+      <view style="border: 1rpx solid #CCDAFF;border-top:0;">
+        <!-- 循环下面class=desc -->
+        <view class="desc" wx:for="{{list}}" wx:key="index">
+          <view class="item">
+            <view class="top {{item.score < 60 ? 'red' : ''}}" data-index="{{index}}" bindtap="titleColumn">
+              <view class="top-l">{{item.course}}</view>
+              <view class="top-r">{{item.score}}分</view>
+            </view>
+            <!-- 分数下面详情 要控制显示隐藏 -->
+            <view class="{{currentIndex == index ? 'bottom' : 'hidden'}}">
+              <view class="bottom-item">
+                <view class="bottom-item-l">主讲老师</view>
+                <view class="bottom-item-r">赵雪涛</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">考试性质</view>
+                <view class="bottom-item-r">补考</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">评分</view>
+                <view class="bottom-item-r">80分</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">期末</view>
+                <view class="bottom-item-r">80分</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">总分</view>
+                <view class="bottom-item-r">80分</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">成绩备注</view>
+                <view class="bottom-item-r">这个分数不错这个分数不错这个分数不错这个分数不错这个分数不错这个分数不错这个分数不错这个分数不错</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+
+    </view>
+
+  </view>
+</view>

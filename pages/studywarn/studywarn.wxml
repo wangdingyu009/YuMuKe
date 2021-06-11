@@ -1,0 +1,36 @@
+<!--pages/studywarn/studywarn.wxml学业预警-->
+<view class="layer">
+  <view style="height: 8rpx;"></view>
+  <view class="list">
+    <view class="left">
+      <image src="/images/warning.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">
+        学业预警学业预警学业预警学业预警学业预警学业预警学业预警学业预警
+      </view>
+      <view class="time">
+        预警时间：2018-09-18  12:00:21
+      </view>
+      <view class="desc">
+        文学作品有诗歌、散文、小说以及词、赋、曲等多种表现形式,在各种文体中,又有多种多样。文学作品有诗歌、散文、小说以及词、赋、曲等多种表现形式,在各种文体中,又有多种多样。
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="left">
+      <image src="/images/warning.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">
+        学业预警学业预警学业预警学业预警学业预警学业预警学业预警学业预警
+      </view>
+      <view class="time">
+        预警时间：2018-09-18  12:00:21
+      </view>
+      <view class="desc">
+        文学作品有诗歌、散文、小说以及词、赋、曲等多种表现形式,在各种文体中,又有多种多样。文学作品有诗歌、散文、小说以及词、赋、曲等多种表现形式,在各种文体中,又有多种多样。
+      </view>
+    </view>
+  </view>
+</view>

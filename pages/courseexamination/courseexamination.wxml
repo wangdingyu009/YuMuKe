@@ -1,0 +1,40 @@
+<!--pages/courseexamination/courseexamination.wxml课程考试-->
+<view class="examination">
+  <!-- 头部 -->
+  <view class="head">
+    <view style="display:flex;">
+      <picker bindchange="bindPickerChange" value="{{selectDate}}" mode="date">
+      <view class="picker">
+        {{selectDate}}
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </picker>
+    <picker bindchange="bindPickerChange1" value="{{selectDate1}}" mode="date">
+      <view class="picker">
+        {{selectDate1}}
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </picker>
+    </view>
+    <view class="lines"></view>
+    <view wx:if="{{isFixedTitle}}" class="fix-head">{{fixedTitle}}</view>
+  </view>
+  <view style="height: 42px;"></view>
+  <!-- 考试时间和地点 -->
+  <view wx:if="list.length > 0" class="layer">
+    <view data-index="{{index}}" class="list {{'list' + index}}" wx:for="{{list}}" wx:key="index">
+      <view class="heads">{{item[0].examday + ' ' + item[0].week}}</view>
+      <view class="con-info" wx:for="{{item}}" wx:key="index">
+        <view class="info-l"></view>
+        <view class="info-r">
+          <view class="top">{{item.coursename}}</view>
+          <view class="middle">考场：{{item.examroom}}</view>
+          <view class="bottom">{{item.examtime}}</view>
+        </view>
+      </view>
+      
+
+    </view>
+  </view>
+</view>
+<!-- <view style="height:1000rpx;"></view> -->

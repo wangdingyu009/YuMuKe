@@ -1,0 +1,20 @@
+<!--pages/roomselect/roomselect.wxml教师选择-->
+<view class="select">
+  <view class="layer">
+    <view class="search">
+      <!-- <l-search-bar value="{{searchText}}" placeholder="请输入教室"></l-search-bar> -->
+      <input value="{{searchText}}" bindinput="inputChange" auto-focus placeholder="请输入教室" />
+      <image class="sousuo" src="/images/sousuo.png"></image>
+      <image bindtap="clear" wx:if="{{searchText}}" class="close" src="/images/guanbi.png"></image>
+      <button class="set-bt" size="mini">取消</button>
+    </view>
+    <view class="list">
+      <view class="room-name">数位电脑系统 忠B06室</view>
+      <view class="room-name">数位电脑系统 忠B07室</view>
+      <view class="room-name">数位电脑系统 忠B08室</view>
+      <view class="room-name">数位电脑系统 忠B09室</view>
+      <view class="room-name">数位电脑系统 忠B05室</view>
+      <view class="room-name">数位电脑系统 忠B03室</view>
+    </view>
+  </view>
+</view>

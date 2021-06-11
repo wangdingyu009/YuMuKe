@@ -1,0 +1,64 @@
+<!--pages/roomtime/roomtime.wxml教室时间-->
+<view class="room">
+  <view class="title">2019-2020年第二学期</view>
+  <view class="cate">
+    <view class="item">
+      <view class="left">查询方式</view>
+      <view class="right">
+        <picker bindchange="findWayChange" value="{{findWayIndex}}" range="{{findWay}}">
+          <view class="pickermethod">
+            {{findWay[findWayIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </view>
+    <view class="item" wx:if="{{findWayIndex == 0}}">
+      <view class="left">日期</view>
+      <view class="right">
+        <picker mode="date" bindchange="dateChange" value="{{dates}}">
+          <view class="pickerdate">
+            {{dates}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </view>
+    <view class="item" wx:if="{{findWayIndex == 1}}">
+      <view class="left">周次</view>
+      <view class="right">
+        <picker bindchange="weekChange" value="{{weekIndex}}" range="{{week}}">
+          <view class="pickerdate">
+            {{week[weekIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">校区</view>
+      <view class="right">
+        <picker bindchange="campusChange" value="{{campusIndex}}" range="{{campus}}">
+          <view class="pickermethod">
+            {{campus[campusIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </view>
+    <view class="item">
+      <view class="left">教学楼</view>
+      <view class="right">
+        <picker bindchange="roomChange" value="{{roomIndex}}" range="{{room}}">
+          <view class="pickermethod">
+            {{room[roomIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </view>
+  </view>
+  <view bindtap="submit" class="bottom">
+    确定
+  </view>
+</view>

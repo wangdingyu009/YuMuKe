@@ -1,0 +1,11 @@
+/* pages/help/index.wxss */
+.van-collapse-item__content {
+  background-color: #F8F8FA !important;
+  color: #666669 !important;
+  font-size: 28rpx !important;
+  line-height: 44rpx !important;
+}
+.van-cell__title {
+  color: #333336;
+  font-size: 32rpx;
+}

@@ -1,0 +1,40 @@
+<!--pages/supplytask/supplytask.wxml代课任务-->
+
+<view class="head">
+  <view class="week-l">
+    <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+          <view class="pickermethod">
+            {{zhouci[zhouciIndex] || '周次'}}
+          </view>
+        </picker>
+        <image bindtap="zhouciChange" src="/images/dropdown.png"></image>
+      </view>
+  <view class="week-r">
+    <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+          <view class="pickermethod">
+            {{xingqi[xingqiIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+  </view>
+</view>
+<view wx:if="{{list.length > 0}}" class="supply">
+  
+  <view wx:for="{{list}}" wx:key="index" class="list {{item.overDueStatus ? 'overdue' : ''}}" data-id="{{item.id}}" bindtap="goDesc">
+    <view class="date">
+      <view class="left">{{item.trandsferDate}} <text> /  {{item.suspendWeeksName}}</text></view>
+      <view class="right">{{item.suspendSectionName}}</view>
+    </view>
+    <view class="desc">
+      {{item.courseName}}
+    </view>
+    <view class="room">
+      教室：{{item.suspendRoomname}}
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="../../images/zanwu.png"></image>
+    <view>暂无数据</view>
+  </view>

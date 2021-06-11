@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-notice-bar": "lin-ui/notice-bar/index"
+  },
+  "navigationBarTitleText": "优慕课",
+  "navigationBarBackgroundColor": "#5D88FF",
+  "navigationBarTextStyle": "white"
+}

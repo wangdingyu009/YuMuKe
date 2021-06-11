@@ -1,0 +1,25 @@
+/* pages/viewinclass/viewinclass.wxss */
+page {
+  background: #FFF;
+}
+
+.class {
+  border-top: 16rpx solid #F5F5F6;
+  border-bottom: 16rpx solid #F5F5F6;
+  min-height: calc(100vh - 32rpx);
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+}
+
+.info {
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+  border: 1rpx solid #DDE4F6;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 8rpx;
+  margin-top: 28rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

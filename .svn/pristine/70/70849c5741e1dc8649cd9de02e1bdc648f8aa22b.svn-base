@@ -1,0 +1,98 @@
+/*
+ * @Description: login
+ * @Version: 2.0
+ * @Autor: yanghui
+ * @Date: 2020-07-22 14:13:15
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-08-08 11:26:13
+ */ 
+
+//app.js
+// 安装扩展组件的方法 npm i @miniprogram-component-plus/tabs --save
+// 引入扩展组件 "usingComponents": {"mp-tabs": "@miniprogram-component-plus/tabs"} @miniprogram-component-plus这个名字看根目录下是什么名字
+// 引入组件的方法 "usingComponents": {"mp-dialog": "weui-miniprogram/dialog/dialog",}
+import { login } from './utils/api'
+App({
+  globalData: {
+   
+  },
+  onLaunch: function () {
+    // 展示本地存储能力
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+
+    // 登录
+    // wx.login({
+    //   success: res => {
+    //     console.log(res, 'code')
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //   }
+    // })
+    // 获取用户信息
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: async res  => {
+              // 可以将 res 发送给后台解码出 unionId
+              let avatar = res.userInfo.avatarUrl
+              let gender = res.userInfo.gender
+              let username = res.userInfo.nickName
+              // 已授权直接跳转首页
+              if(wx.getStorageSync('token')) {
+                wx.reLaunch({
+                  url: '/pages/index/index'
+                })
+              }
+              
+              // wx.login({
+              //   success: async res => {
+              //     let userInfo = {
+              //       avatar: avatar,
+              //       gender: gender,
+              //       username: username,
+              //       wx_code: res.code
+              //     }
+              //     let resLogin = await login(userInfo)
+              //     if(resLogin.code == 0) {
+              //       this.globalData.userInfo = {
+              //         avatar: resLogin.data.avatar,
+              //         gender: resLogin.data.gender,
+              //         username: resLogin.data.username,
+              //       }
+              //       if (this.userInfoReadyCallback) {
+              //         this.userInfoReadyCallback(resLogin)
+              //       }
+              //       console.log(this.globalData.userInfo, 'userInfo')
+              //       wx.setStorageSync('token', resLogin.data.token)
+              //       wx.setStorageSync('userId', resLogin.data.user_id)
+              //       wx.setStorageSync('openId', resLogin.data.open_id)
+              //       this.globalData.openId= resLogin.data.open_id
+                    
+              //     }
+              //   }
+              // })
+              
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              
+            }
+          })
+        } else {
+          // wx.reLaunch({
+          //   // url: '../login/index'
+          // })
+        }
+      }
+    })
+  },
+
+  // wx.getStorageSync('key')
+  globalData: {
+    userInfo: null,
+    uid: wx.getStorageSync('uid'),
+  }
+})

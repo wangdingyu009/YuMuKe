@@ -1,0 +1,12 @@
+<!--pages/currentsemester/currentsemester.wxml本学期课表以及各个学期课表-->
+<view class="current">
+  <view style="height:8rpx;"></view>
+  <view class="content" bindtap="goDetail">
+    <view class="title">中学生英语水平提高幅度与英文歌曲听唱之间的关系调查中学生英语水平提高幅度与英文歌曲听唱之间的关系调查</view>
+    <view class="number">课程号:1024</view>
+  </view>
+  <view class="content">
+    <view class="title">中学生英语水平提高幅度与英文歌曲听唱之间的关系调查中学生英语水平提高幅度与英文歌曲听唱之间的关系调查</view>
+    <view class="number">课程号:1024</view>
+  </view>
+</view>

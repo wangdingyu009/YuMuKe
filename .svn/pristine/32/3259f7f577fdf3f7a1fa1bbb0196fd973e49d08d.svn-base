@@ -1,0 +1,15 @@
+<!--pages/watchtask/watchtask.wxml监考任务-->
+<view class="watch">
+  <view class="section">
+    <picker class="date-left" mode="date" value="{{startDate}}" bindchange="bindDateChangeStart">
+      <view class="picker">
+        {{startDate}}
+      </view>
+    </picker>
+    <picker class="date-right" mode="date" value="{{startDate}}" bindchange="bindDateChangeStart">
+      <view class="picker">
+        {{endDate}}
+      </view>
+    </picker>
+  </view>
+</view>

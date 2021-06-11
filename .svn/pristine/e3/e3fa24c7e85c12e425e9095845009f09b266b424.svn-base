@@ -1,0 +1,107 @@
+<!--pages/roomapplyinfo/roomapplyinfo.wxml教室申请详情-->
+<view class="info">
+  <view class="reason">
+    <view class="state">{{statusval}}</view>
+    <view class="title">借用规则</view>
+    <view class="con">{{desc.borrowRuleName}}</view>
+  </view>
+  <view class="layer">
+    <view class="intro">
+      <view class="item">
+        <view class="left">原因</view>
+        <view class="right">{{desc.applyReason}}</view>
+      </view>
+      <view class="item">
+        <view class="left">借用人</view>
+        <view class="right">{{desc.borrowerName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">实际借用人</view>
+        <view class="right">{{desc.realBorrowerName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">借用人电话</view>
+        <view class="right">{{desc.borrowerPhone}}</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人</view>
+        <view class="right">{{desc.applyName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">借用天数</view>
+        <view class="right">{{desc.borrowDays}}天</view>
+      </view>
+      <view class="item">
+        <view class="left">教室要求</view>
+        <view class="right">这个字段还没有</view>
+      </view>
+      <!-- <view class="item">
+        <view class="left">事由</view> 事由和备注是同一个
+        <view class="right">{{desc.borrowReason}}</view>
+      </view> -->
+      <view class="item">
+        <view class="left">备注</view>
+        <view class="right">{{desc.borrowReason}}</view>
+      </view>
+    </view>
+    <!-- 代课信息 -->
+    <view class="time">
+      <view class="title" style="position: relative;">
+        教室数 2间这个还需要后台修改接口
+        <image src="/images/arrow-down.png" style="width: 48rpx;height: 48rpx;position:absolute;right:0rpx;top: 23rpx;">
+        </image>
+      </view>
+      <view class="desc-info">
+        <view class="room">
+          <view class="title-l">教室</view>
+          <view class="con">化工北楼阿012</view>
+        </view>
+        <view class="cycle">
+          <view class="title-l">周次</view>
+          <view class="con">第1-17周</view>
+        </view>
+        <view class="week">
+          <view class="title-l">星期</view>
+          <view class="con">星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">节次</view>
+          <view class="con"> 2-3节A</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="padding-left: 32rpx;padding-right: 32rpx;">
+    <view class="accessory" wx:for="{{desc.borrowApplyDocumenList}}" wx:key="index" data-item="{{item}}"
+      bindtap="downLoad">
+      <view class="left">附件</view>
+      <view class="right">{{item.fileName}}</view>
+    </view>
+    <view class="liucheng">
+      <view class="liucheng-title">流程</view>
+      <view wx:for="{{desc.approvalRecords}}" wx:key="index" class="layer-con">
+        <view class="cons">
+          <view class="color333">{{index == 0 ? '发起申请' : '审批人: ' + item.approvalName}}</view>
+          <view class="color333 fw-400">{{index == 0 ? item.applyName : item.approvalExplain}}</view>
+        </view>
+        <view class="date color666">{{index == 0 ? item.applyDate : item.approvalTime}}</view>
+        <view class="circles"></view>
+        <view class="shuxian {{desc.coursesApprovalList.length == 1 ? 'show-shuxian' : ''}}"></view>
+      </view>
+
+      <view wx:if="{{desc.approvalRecords.length == 1}}" class="layer-cons">
+        <view class="cons">
+          <view class="color333">审批人:</view>
+          <view class="color333 fw-400">等待审批...</view>
+        </view>
+        <view class="date color666">待审批</view>
+        <view class="circles bc-999"></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<modal hidden="{{hiddenmodalput}}" confirmColor="#5D88FF" title="暂不支持该文档格式预览，请复制到浏览器打开" confirm-text="复制"
+  cancel-text="取消" bindcancel="cancelM" bindconfirm="confirmM">
+  <view style="text-align:center;margin-top:10rpx;margin-bottom:10rpx;">{{zipUrl}}</view>
+</modal>

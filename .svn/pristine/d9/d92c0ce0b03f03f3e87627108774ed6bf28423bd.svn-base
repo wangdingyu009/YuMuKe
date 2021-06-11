@@ -1,0 +1,69 @@
+/*
+ * @Description: api
+ * @Version: 2.0
+ * @Autor: yanghui
+ * @Date: 2020-07-22 16:45:03
+ * @LastEditors: xingJing
+ * @LastEditTime: 2020-09-01 18:21:27
+ */
+import {
+  request
+} from './request'
+
+// 截取日期 保留 2020-05-06格式
+let splitDate = function (item) {
+  let date = item.trim()
+  return date.substring(0, 10)
+}
+// 根据日期获取星期几
+let getWeek = function(dateString) {
+  var dateArray = dateString.split("-");
+  var date = new Date(dateArray[0], parseInt(dateArray[1] - 1), dateArray[2]);
+  return "星期" + "日一二三四五六".charAt(date.getDay());
+};
+// 首页加载数据
+let loadingIndex = (data) => {
+  return request('/app/umooc/index', data, 'get')
+}
+
+// 监考任务列表
+let jiankaoTask = (data) => {
+  return request('/app/umooc/getInvigilateTaskList', data, 'get')
+}
+// 监考任务详情
+let jiankaoTaskInfo = (data) => {
+  return request('/app/umooc/getInvigilateTaskDetail', data, 'get')
+}
+// 等级考试
+let levelExam = (data) => {
+  return request('/app/umooc/getRankExamList', data, 'get')
+}
+// 校区和教学楼
+let xiaoqu = (data) => {
+  return request('/app/umooc/roomScheduleList', data, 'get')
+}
+// 教室时间
+let roomTime = (data) => {
+  return request('/app/umooc/roomScheduleResultList', data, 'get')
+}
+// 教室搜索
+let searchRoom = (data) => {
+  return request('', data, 'get')
+}
+// 综合审查
+let zongheQuery = (data) => {
+  return request('/app/umooc/getCheckProjectList', data, 'get')
+}
+
+module.exports = {
+  getWeek,
+  splitDate,
+  loadingIndex,
+  jiankaoTask,
+  jiankaoTaskInfo,
+  levelExam,
+  xiaoqu,
+  searchRoom,
+  roomTime,
+  zongheQuery
+}

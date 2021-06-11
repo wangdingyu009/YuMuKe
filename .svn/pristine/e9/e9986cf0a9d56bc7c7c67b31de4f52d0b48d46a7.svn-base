@@ -1,0 +1,2 @@
+<!--pages/readfile/readfile.wxml-->
+<view>{{text}}</view>

@@ -1,0 +1,26 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-23 15:57:01
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-23 17:56:31
+-->
+<!--pages/mymessage/index.wxml-->
+<view class="my-message">
+  <view class="message-list" wx:for="{{messageList}}" bindtap="detialTap" data-id="{{item.type}}">
+    <view class="msg-left">
+      <image wx:if="{{item.type == 1}}" src="/images/gonggao.png"></image>
+      <image wx:if="{{item.type == 2}}" src="/images/tongzhi.png"></image>
+      <image wx:if="{{item.type == 3}}" src="/images/xitong.png"></image>
+      <view class="spot" wx:if="{{item.status == 1}}"></view>
+    </view>
+    <view class="msg-right">
+      <view class="msg-top">
+        <text class="name">{{item.name}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+      <view class="desc">{{item.desc}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,89 @@
+/* pages/teachtaskinfo/teachtaskinfo.wxss */
+page {
+  background: #F5F5F6;
+}
+
+.info {
+  padding: 24rpx 32rpx;
+}
+
+.course {
+  background: #FFF;
+  padding: 32rpx 28rpx;
+  font-size: 32rpx;
+  color: #333336;
+  border-radius: 16rpx;
+}
+
+.desc {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28rpx;
+}
+
+.course .desc:last-child {
+  margin-bottom: 0;
+}
+
+.title-t {
+  width: 192rpx;
+  color:#99999C;
+}
+
+.content {
+  width: 438rpx;
+}
+
+.view-all {
+  color: #5D88FF;
+}
+
+.line {
+  height: 1rpx;
+  background: #EEEEF1;
+  margin-bottom: 28rpx;
+}
+
+/* 上课时间地点 */
+.time {
+  background: #fff;
+  margin-top: 16rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  border-radius: 16rpx;
+  padding-bottom: 32rpx;
+}
+
+.title {
+  height: 98rpx;
+  line-height: 98rpx;
+  font-weight: 600;
+  color: #33333C;
+}
+
+.desc-info {
+  height: 172rpx;
+  background: rgba(93, 136, 255, 0.12);
+  border-radius: 8rpx;
+  padding: 24rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 16rpx;
+}
+
+.cycle, .week, .section, .room {
+  display: flex;
+  justify-content: start;
+}
+
+.title-l {
+  color: #99999C;
+  width: 76rpx;
+}
+
+.con {
+  color: #333336;
+  width: 498rpx;
+}

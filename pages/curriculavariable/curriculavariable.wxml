@@ -1,0 +1,13 @@
+<!--pages/curriculavariable/curriculavariable.wxml选课名单-->
+<view class="student">
+  <view class="table">
+    <view class="head">
+      <view>学生姓名</view>
+      <view>学号</view>
+    </view>
+    <view class="desc" wx:for="{{list}}" wx:key="index">
+      <view class="left">{{item.realName}}</view>
+      <view class="right">{{item.studentNo}}</view>
+    </view>
+  </view>
+</view>

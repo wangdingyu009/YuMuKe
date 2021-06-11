@@ -1,0 +1,10 @@
+<!--pages/viewinclass/viewinclass.wxml查看合班-->
+<view class="class" wx:if="{{list.length > 0}}">
+  <view style="height: 4rpx;"></view>
+  <view class="info" wx:for="{{list}}" wx:key="index">{{item.className}}</view>
+</view>
+<!-- 没有数据的时候展示页 -->
+<view wx:if="{{list.length == 0}}" class="no-data">
+  <image src="../../images/zanwu.png"></image>
+  <view>暂无数据</view>
+</view>

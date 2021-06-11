@@ -1,0 +1,50 @@
+<!--pages/courseexamine/courseexamine.wxml 调课审批-->
+<view class="head">
+  <view class="week-l">
+    <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+          <view class="pickermethod">
+            {{zhouci[zhouciIndex]}}
+          </view>
+        </picker>
+        <image bindtap="zhouciChange" src="/images/dropdown.png"></image>
+      </view>
+  <view class="week-r">
+    <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+          <view class="pickermethod">
+            {{xingqi[xingqiIndex]}}
+          </view>
+        </picker>
+        <image src="/images/dropdown.png"></image>
+  </view>
+</view>
+<!-- 头部下拉框end -->
+<!-- 列表start -->
+<view class="list">
+  <view class="layer" bindtap="goDetail">
+    <view class="item-1">生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学</view>
+    <view class="item-2">申请人：张智霖</view>
+    <view class="item-3">申请时间：2020-09-16</view>
+    <view class="item-4">调课类型：代课</view>
+    <view class="item-5">已通过</view>
+  </view>
+  <view class="layer" bindtap="goDetail">
+    <view class="item-1">生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学</view>
+    <view class="item-2">申请人：张智霖</view>
+    <view class="item-3">申请时间：2020-09-16</view>
+    <view class="item-4">调课类型：代课</view>
+    <view class="item-5 red">未通过</view>
+  </view>
+  <view class="layer" bindtap="goDetail">
+    <view class="item-1">生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学</view>
+    <view class="item-2">申请人：张智霖</view>
+    <view class="item-3">申请时间：2020-09-16</view>
+    <view class="item-4">调课类型：代课</view>
+    <view class="item-5 blue">待审批</view>
+  </view>
+</view>
+
+<!-- 暂无数据 -->
+<view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="../../images/zanwu.png"></image>
+    <view>暂无数据</view>
+  </view>

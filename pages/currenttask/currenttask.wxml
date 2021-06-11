@@ -1,0 +1,12 @@
+<!--pages/currenttask/currenttask.wxml本学期任务-->
+<view class="current">
+  <view class="desc" wx:for="{{list}}" wx:key="index">
+    <view class="left">
+      <image src="/images/currenttask.png"></image>
+    </view>
+    <view class="right"  bindtap="goDesc" data-eqid="{{item.epid}}">
+      <view class="title">{{item.courseName}}</view>
+      <view class="number">课程号：{{item.pcourseId}}</view>
+    </view>
+  </view>
+</view>

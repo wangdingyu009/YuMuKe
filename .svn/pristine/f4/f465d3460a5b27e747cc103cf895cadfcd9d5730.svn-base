@@ -1,0 +1,59 @@
+<!--pages/supplytaskinfo/supplytaskinfo.wxml代课任务详情-->
+<view class="info">
+  <view class="desc">
+    <view class="number">
+      <view class="left">课程号</view>
+      <view class="right">yu468247234234</view>
+    </view>
+    <view class="name">
+      <view class="left">课程名</view>
+      <view class="right">生物药剂学与药物动力学</view>
+    </view>
+    <view class="teach">
+      <view class="left">教师号</view>
+      <view class="right">645893</view>
+    </view>
+  </view>
+  <!-- 上课时间地点 -->
+  <view class="time">
+    <view class="title">
+      上课时间地点
+    </view>
+    <view class="desc-info">
+      <view class="cycle">
+        <view class="title-l">周次</view>
+        <view class="con">第1-17周</view>
+      </view>
+      <view class="week">
+        <view class="title-l">星期</view>
+        <view class="con">星期五</view>
+      </view>
+      <view class="section">
+        <view class="title-l">节次</view>
+        <view class="con"> 2-3节A</view>
+      </view>
+      <view class="room">
+        <view class="title-l">教师</view>
+        <view class="con">化工北楼阿012</view>
+      </view>
+    </view>
+    <view class="desc-info">
+      <view class="cycle">
+        <view class="title-l">周次</view>
+        <view class="con">第1-17周</view>
+      </view>
+      <view class="week">
+        <view class="title-l">星期</view>
+        <view class="con">星期五</view>
+      </view>
+      <view class="section">
+        <view class="title-l">节次</view>
+        <view class="con"> 2-3节A</view>
+      </view>
+      <view class="room">
+        <view class="title-l">教师</view>
+        <view class="con">化工北楼阿012</view>
+      </view>
+    </view>
+  </view>
+</view>

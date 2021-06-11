@@ -1,0 +1,101 @@
+<!--pages/roomapplyinfo/roomapplyinfo.wxml教室申请详情-->
+<view class="info">
+  <view class="reason">
+    <view class="state">待审批</view>
+    <view class="title">借用规则</view>
+    <view class="con">肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛</view>
+  </view>
+  <view class="layer">
+    <view class="intro">
+      <view class="item">
+        <view class="left">原因</view>
+        <view class="right">调课</view>
+      </view>
+      <view class="item">
+        <view class="left">借用人</view>
+        <view class="right">王二</view>
+      </view>
+      <view class="item">
+        <view class="left">实际借用人</view>
+        <view class="right">李四</view>
+      </view>
+      <view class="item">
+        <view class="left">借用人电话</view>
+        <view class="right">13352525252</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人</view>
+        <view class="right">张三</view>
+      </view>
+      <view class="item">
+        <view class="left">天数</view>
+        <view class="right">1天</view>
+      </view>
+      <view class="item">
+        <view class="left">教室要求</view>
+        <view class="right">这边教室要干净</view>
+      </view>
+      <view class="item">
+        <view class="left">事由</view>
+        <view class="right">不想说</view>
+      </view>
+      <view class="item">
+        <view class="left">备注</view>
+        <view class="right">学生党团活动学生党团活动</view>
+      </view>
+    </view>
+    <!-- 代课信息 -->
+    <view class="time">
+      <view class="title" style="position: relative;">
+        教室数 2间
+        <image src="/images/arrow-down.png" style="width: 48rpx;height: 48rpx;position:absolute;right:0rpx;top: 23rpx;"></image>
+      </view>
+      <view class="desc-info">
+        <view class="room">
+          <view class="title-l">教室</view>
+          <view class="con">化工北楼阿012</view>
+        </view>
+        <view class="cycle">
+          <view class="title-l">周次</view>
+          <view class="con">第1-17周</view>
+        </view>
+        <view class="week">
+          <view class="title-l">星期</view>
+          <view class="con">星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">节次</view>
+          <view class="con"> 2-3节A</view>
+        </view>
+      </view>
+      <view class="desc-info">
+        <view class="cycle">
+          <view class="title-l">周次</view>
+          <view class="con">第1-17周</view>
+        </view>
+        <view class="week">
+          <view class="title-l">星期</view>
+          <view class="con">星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">节次</view>
+          <view class="con"> 2-3节A</view>
+        </view>
+        <view class="room">
+          <view class="title-l">教师</view>
+          <view class="con">化工北楼阿012</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="padding-left: 32rpx;padding-right: 32rpx;">
+    <view class="accessory">
+      <view class="left">附件</view>
+      <view class="right">关于林语堂楼A402.txt</view>
+    </view>
+    <view class="liucheng">
+      <view>流程</view>
+      
+    </view>
+  </view>
+</view>

@@ -1,0 +1,176 @@
+<!--pages/courseexamineinfo/courseexamineinfo.wxml调课审批详情-->
+<view class="info">
+  <view class="reason">
+    <view class="state">珂南提交的申请</view>
+    <view class="title">原因</view>
+    <view class="con">肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛肚子疼痛</view>
+  </view>
+  <view class="layer">
+    <view class="intro">
+      <view class="item">
+        <view class="left">类型</view>
+        <view class="right">调课</view>
+      </view>
+      <view class="item">
+        <view class="left">课程号</view>
+        <view class="right">68421397895</view>
+      </view>
+      <view class="item">
+        <view class="left">课程名</view>
+        <view class="right">语文课</view>
+      </view>
+      <view class="item">
+        <view class="left">课序号</view>
+        <view class="right">856545268877</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人</view>
+        <view class="right">张三</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人电话</view>
+        <view class="right">13352525252</view>
+      </view>
+      <view class="item">
+        <view class="left">代课人</view>
+        <view class="right">张三</view>
+      </view>
+      <view class="item">
+        <view class="left">代课人电话</view>
+        <view class="right">13352525252</view>
+      </view>
+      <view class="item">
+        <view class="left">总学时</view>
+        <view class="right">4</view>
+      </view>
+      <view class="item">
+        <view class="left">其他学时</view>
+        <view class="right">1</view>
+      </view>
+      <view class="item">
+        <view class="left">合班</view>
+        <view class="right" style="color: #5D88FF;" bindtap="viewInfo">查看合班</view>
+      </view>
+      <view class="item">
+        <view class="left">要求</view>
+        <view class="right">不想说</view>
+      </view>
+      <view class="item">
+        <view class="left">备注</view>
+        <view class="right">学生党团活动学生党团活动</view>
+      </view>
+    </view>
+    <!-- 代课信息 -->
+    <view class="time" style="padding-bottom: 32rpx;">
+      <view class="title" style="position: relative;">
+        调课信息
+        <image src="/images/arrow-down.png" style="width: 48rpx;height: 48rpx;position:absolute;right:0rpx;top: 23rpx;"></image>
+      </view>
+      <view class="desc-info">
+        <view class="room">
+          <view class="title-l">停课日期</view>
+          <view class="con">2020-12-30</view>
+        </view>
+        <view class="cycle">
+          <view class="title-l">教学周</view>
+          <view class="con">10</view>
+        </view>
+        <view class="week">
+          <view class="title-l">节次</view>
+          <view class="con">1-2</view>
+        </view>
+        <view class="section">
+          <view class="title-l">星期</view>
+          <view class="con"> 星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">教室</view>
+          <view class="con"> 林语堂A309</view>
+        </view>
+        <view style="height: 2rpx;background: #D2D2D2;margin-top: 24rpx;margin-bottom: 24rpx;"></view>
+        <view class="room">
+          <view class="title-l">课日期</view>
+          <view class="con">2020-12-30</view>
+        </view>
+        <view class="cycle">
+          <view class="title-l">教学周</view>
+          <view class="con">10</view>
+        </view>
+        <view class="week">
+          <view class="title-l">节次</view>
+          <view class="con">1-2</view>
+        </view>
+        <view class="section">
+          <view class="title-l">星期</view>
+          <view class="con"> 星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">教室</view>
+          <view class="con"> 林语堂A309</view>
+        </view>
+      </view>
+      <view class="desc-info">
+        <view class="room">
+          <view class="title-l">停课日期</view>
+          <view class="con">2020-12-30</view>
+        </view>
+        <view class="cycle">
+          <view class="title-l">教学周</view>
+          <view class="con">10</view>
+        </view>
+        <view class="week">
+          <view class="title-l">节次</view>
+          <view class="con">1-2</view>
+        </view>
+        <view class="section">
+          <view class="title-l">星期</view>
+          <view class="con"> 星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">教室</view>
+          <view class="con"> 林语堂A309</view>
+        </view>
+        <view style="height: 2rpx;background: #D2D2D2;margin-top: 24rpx;margin-bottom: 24rpx;"></view>
+        <view class="room">
+          <view class="title-l">课日期</view>
+          <view class="con">2020-12-30</view>
+        </view>
+        <view class="cycle">
+          <view class="title-l">教学周</view>
+          <view class="con">10</view>
+        </view>
+        <view class="week">
+          <view class="title-l">节次</view>
+          <view class="con">1-2</view>
+        </view>
+        <view class="section">
+          <view class="title-l">星期</view>
+          <view class="con"> 星期五</view>
+        </view>
+        <view class="section">
+          <view class="title-l">教室</view>
+          <view class="con"> 林语堂A309</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="padding-left: 32rpx;padding-right: 32rpx;">
+    <view class="accessory">
+      <view class="left">附件</view>
+      <view class="right">关于林语堂楼A402.txt</view>
+    </view>
+    <view class="liucheng">
+      <view>流程</view>
+      
+    </view>
+  </view>
+</view>
+<!-- 底部确认拒绝 -->
+<view class="bottom-bt">
+  <view class="container">
+    <view bindtap="goRefuse" class="bottom-bt-l">拒绝</view>
+  <view bindtap="goConfirm" class="bottom-bt-r">确认</view>
+  </view>
+</view>
+<view style="height: 98rpx;"></view>
+

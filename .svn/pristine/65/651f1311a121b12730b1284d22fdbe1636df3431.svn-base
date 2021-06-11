@@ -1,0 +1,30 @@
+<!--pages/currenttask/currenttask.wxml本学期任务-->
+<view class="current">
+  <view class="desc">
+    <view class="left">
+      <image src="/images/currenttask.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学</view>
+      <view class="number">课程号：1234567890120</view>
+    </view>
+  </view>
+  <view class="desc">
+    <view class="left">
+      <image src="/images/currenttask.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学</view>
+      <view class="number">课程号：1234567890120</view>
+    </view>
+  </view>
+  <view class="desc">
+    <view class="left">
+      <image src="/images/currenttask.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学生物药剂学与药物动力学</view>
+      <view class="number">课程号：1234567890120</view>
+    </view>
+  </view>
+</view>

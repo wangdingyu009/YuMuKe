@@ -1,0 +1,51 @@
+<!--pages/watchtask/watchtask.wxml监考任务-->
+<view class="watch">
+  <!-- 日期选择 -->
+  <view class="section">
+    <picker class="date-left" mode="date" value="{{startDate}}" bindchange="bindDateChangeStart">
+      <view class="picker">
+        {{startDate}}
+      </view>
+      <image src="/images/dropdown.png"></image>
+    </picker>
+    <picker class="date-right" mode="date" value="{{startDate}}" bindchange="bindDateChangeEnd">
+      <view class="picker">
+        {{endDate}}
+      </view>
+      <image src="/images/dropdown.png"></image>
+    </picker>
+  </view>
+  <view style="height: 8rpx;"></view>
+  <!-- 监考内容 -->
+  <view class="content">
+    <view bindtap="goInfo" class="item">
+      <view class="name">
+        <view>课程名称:</view>
+        <view>中学生英语水平提高幅度</view>
+      </view>
+      <view class="numbers">
+        <view>考场:</view>
+        <view>山水文园东园13号楼 901</view>
+      </view>
+      <view class="dates">
+        <view>监考日期:</view>
+        <view>2020-04-24 10:00 - 11:30</view>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="name">
+        <view>课程名称:</view>
+        <view>中学生英语水平提高幅度水平提高幅度水平提高幅度水平提高幅度水平提高幅度水平提高幅度水平提高幅度水平提高幅度与英文歌曲听唱之间的关系调查</view>
+      </view>
+      <view class="numbers">
+        <view>考场:</view>
+        <view>山水文园东园13号楼 901</view>
+      </view>
+      <view class="dates">
+        <view>监考日期:</view>
+        <view>2020-04-24 10:00 - 11:30</view>
+      </view>
+    </view>
+  </view>
+</view>

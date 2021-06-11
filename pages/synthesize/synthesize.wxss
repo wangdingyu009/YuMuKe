@@ -1,0 +1,51 @@
+/* pages/synthesize/synthesize.wxss */
+page {
+  background: #F5F5F6;
+}
+
+.synthesize {
+  padding-top: 24rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  font-size: 28rpx;
+  color: #333336;
+}
+
+.list {
+  width: 630rpx;
+  background: #fff;
+  padding-left: 32rpx;
+  padding-top: 32rpx;
+  padding-right: 28rpx;
+  padding-bottom: 28rpx;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 16rpx;
+}
+
+.left {
+  width: 62rpx;
+}
+
+.left image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.right {
+  width: 628rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 24rpx;
+  color: #99999C;
+  margin-top: 6rpx;
+  margin-bottom: 6rpx;
+}
+
+.con {}

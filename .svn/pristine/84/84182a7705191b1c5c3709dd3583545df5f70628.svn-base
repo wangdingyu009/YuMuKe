@@ -1,0 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-22 13:45:54
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-22 13:47:07
+-->
+<!--pages/help/index.wxml-->
+<view>
+  帮助
+</view>

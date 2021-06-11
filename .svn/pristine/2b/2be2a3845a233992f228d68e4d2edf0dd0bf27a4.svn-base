@@ -1,0 +1,16 @@
+<!--pages/roomselect/roomselect.wxml教师选择-->
+<view class="select">
+  <view class="layer">
+    <view class="search">
+      <!-- <l-search-bar value="{{searchText}}" placeholder="请输入教室"></l-search-bar> -->
+      <input confirm-type="search" value="{{searchText}}" bindconfirm="confirmSearch" bindinput="inputChange" auto-focus placeholder="请输入教室" />
+      <image class="sousuo" src="/images/sousuo.png"></image>
+      <image bindtap="clear" wx:if="{{searchText}}" class="close" src="/images/guanbi.png"></image>
+      <button bindtap="cancel" class="set-bt" size="mini">取消</button>
+    </view>
+    <view wx:if="{{list.length == 0}}" style="background:#F5F5F6;padding-top:20rpx;width:100%;font-size: 28rpx;text-align: center;">暂无更多</view>
+    <view class="list">
+      <view wx:for="{{list}}" bindtap="getRoomInfo" data-rname="{{item.rname}}" data-rid="{{item.rid}}" wx:key="index" class="room-name">{{item.rname}}</view>
+    </view>
+  </view>
+</view>

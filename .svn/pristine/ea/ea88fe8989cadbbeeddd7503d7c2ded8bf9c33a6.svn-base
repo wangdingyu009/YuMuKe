@@ -1,0 +1,8 @@
+var filter = {
+  tel: function (val) {
+    return val.substring(0,3)+'****'+val.substring(7)
+  }
+}
+module.exports = {
+  tel: filter.tel
+}

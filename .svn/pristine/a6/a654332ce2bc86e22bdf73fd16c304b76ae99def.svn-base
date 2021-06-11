@@ -1,0 +1,22 @@
+/* pages/watchtask/watchtask.wxss */
+.watch {
+  min-height: 100vh;
+  background: #F5F5F6;
+}
+
+/* 日期选择 */
+.section {
+  padding-left: 32rpx;
+  width: 750rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #FFF;
+  display: flex;
+  justify-content: start;
+}
+
+.date-left {
+  margin-right: 10rpx;
+}
+
+.date-right {}

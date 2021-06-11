@@ -1,0 +1,17 @@
+<!--pages/setting/index.wxml-->
+<view class="setting">
+  <view class="setting-list">
+    <view class="label">是否接收消息提醒</view>
+    <switch checked="{{switchChecked}}" color="#5D88FF" bindchange="switchChange"/>
+  </view>
+  <view class="setting-list">
+    <view class="label">清除缓存</view>
+    <view class="more" bindtap="cleanTap">
+      <text>67kb</text>
+      <image src="/images/more.png"></image>
+    </view>
+  </view>
+  <van-dialog id="van-dialog" confirm-button-color="#3D70FF" />
+</view>
+
+

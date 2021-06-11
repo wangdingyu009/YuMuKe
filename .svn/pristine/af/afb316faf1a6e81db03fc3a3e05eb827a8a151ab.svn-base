@@ -1,0 +1,35 @@
+<!--pages/synthesize/synthesize.wxml综合审查-->
+<view class="synthesize">
+  <view class="list">
+    <view class="left">
+      <image src="/images/icon_zonghe.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">
+        审查通知审查通知审查通知审查通知审查通知
+      </view>
+      <view class="time">
+        审查时间：2018-09-18  09:02:12
+      </view>
+      <view class="con">
+        文学作品有诗歌、散文、小说以及词、赋、曲等多种表现形式,在各种文体中,又有多种多样。
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="left">
+      <image src="/images/icon_zonghe.png"></image>
+    </view>
+    <view class="right">
+      <view class="title">
+        审查通知审查
+      </view>
+      <view class="time">
+        审查时间：2018-09-18  09:02:12
+      </view>
+      <view class="con">
+        文学作品有诗歌、散文、小说以及词、赋、曲
+      </view>
+    </view>
+  </view>
+</view>

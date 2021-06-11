@@ -1,0 +1,26 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 17:46:38
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-21 18:50:30
+-->
+<!--pages/aboutus/index.wxml-->
+<view class="about-us">
+  <view class="about-info">
+    <view class="info">
+      {{info}}
+    </view>
+  </view>
+  <view class="about-info">
+    <view class="phone">
+      <image src="/images/icon_phone.png"></image>
+      <text class="tit">我们的联系电话</text>
+    </view>
+    <view class="phone-list">
+      <text>13120392938</text>
+      <text>0319 - 31934837</text>
+    </view>
+  </view>
+</view>

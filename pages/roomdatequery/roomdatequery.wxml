@@ -1,0 +1,24 @@
+<!--pages/roomdatequery/roomdatequery.wxml教室时间日期查询-->
+<view class="date-query">
+  <view class="intro">
+    <view class="intro-1"></view>
+    <view class="intro-2">蓝色表示空闲</view>
+    <view class="intro-3"></view>
+    <view class="intro-4">灰色表示已占用</view>
+  </view>
+  <view class="layer">
+    <view bindtap="searchDetail" class="select">
+      {{selectRoom}}
+      <image src="/images/dropdown.png"></image>
+    </view>
+  </view>
+  <view class="title">
+    {{dates + ' ' + weeks}}
+  </view>
+  <view class="info" wx:for="{{list}}" wx:key="index">
+    <view class="head">{{item.rname}}</view>
+    <view class="con">
+      <view wx:for="{{item.roomSchedule[0]}}" wx:key="index" class="square {{item.b == true ? 'dash' : ''}}">{{index + 1}}</view>
+    </view>
+  </view>
+</view>

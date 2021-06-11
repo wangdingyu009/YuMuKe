@@ -1,0 +1,108 @@
+/* pages/roomdatequery/roomdatequery.wxss */
+.date-query {
+  min-height: 100vh;
+  background: #F5F5F6;
+}
+
+.intro {
+  display: flex;
+  justify-content: start;
+  padding-left: 32rpx;
+  padding-top: 36rpx;
+  padding-bottom: 32rpx;
+  height: 36rpx;
+  font-size: 24rpx;
+  color: #333336;
+  background: #fff;
+}
+
+.intro-1 ,.intro-3 {
+  margin-top: 7rpx;
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+
+.intro-1 {
+  background: #5D88FF;
+}
+
+.intro-3 {
+  background: #E4EBFF;
+  margin-left: 48rpx;
+}
+
+/* // 下拉 */
+.layer {
+  background: #fff;
+  padding-bottom: 14rpx;
+}
+.select {
+  display: inline-block;
+  position: relative;
+  font-size: 28rpx;
+  color: #333336;
+  min-width: 316rpx;
+  padding-left: 16rpx;
+  padding-right: 54rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #CCCCCF;
+  border-radius: 8rpx;
+  margin-left: 32rpx;
+}
+
+.select image {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  top: 2rpx;
+  right: 2rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #5D88FF;
+  font-weight: 600;
+  padding-left: 32rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+.info {
+  /* margin-top: 15rpx; */
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  border-bottom: 1rpx solid #EEEEF1;
+  background: #fff;
+}
+
+.head {
+  font-size: 32rpx;
+  color: #333336;
+  font-weight: 500;
+}
+
+.con {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.con .square {
+  text-align: center;
+  color: #fff;
+  width: 56rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  margin-right: 14rpx;
+  background: #5D88FF;
+  margin-bottom: 14rpx;
+  border-radius: 8rpx;
+}
+.con .square:nth-of-type(10) {
+  margin-right: 0;
+}

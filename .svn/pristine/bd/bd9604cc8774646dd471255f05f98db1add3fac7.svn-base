@@ -1,0 +1,74 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 10:50:32
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-23 17:29:56
+-->
+<!--pages/mine/mine.wxml我的-->
+<view class="mine">
+  <view class="personal" bindtap="jumpTap" data-type="1">
+    <view class="p-left">
+      <image src="/images/avatar.png"></image>
+    </view>
+    <view class="p-middle">
+      李小洪单独
+    </view>
+    <view class="p-right">
+      <view>查看资料</view>
+      <image src="/images/arrow-r.png"></image>
+    </view>
+  </view>
+
+  <view style="margin-top: 20rpx;" class="list" bindtap="jumpTap" data-type="1">
+    <view class="l-left">
+      <image src="/images/mineaccount.png"></image>
+    </view>
+    <view class="l-middle">我的账户</view>
+    <view class="l-right">
+      <image src="/images/arrow-r.png"></image>
+    </view>
+  </view>
+  <view class="list" bindtap="jumpTap" data-type="2">
+    <view class="l-left">
+      <image src="/images/mineinfo.png"></image>
+    </view>
+    <view class="l-middle">我的消息</view>
+    <view class="l-right">
+      <image src="/images/arrow-r.png"></image>
+    </view>
+  </view>
+  <view style="margin-top: 20rpx;" class="list" bindtap="jumpTap" data-type="3">
+    <view class="l-left">
+      <image src="/images/mineset.png"></image>
+    </view>
+    <view class="l-middle">设置</view>
+    <view class="l-right">
+      <image src="/images/arrow-r.png"></image>
+    </view>
+  </view>
+  <view class="list" bindtap="jumpTap" data-type="4">
+    <view class="l-left">
+      <image src="/images/minecontact.png"></image>
+    </view>
+    <view class="l-middle">联系我们</view>
+    <view class="l-right">
+      <image src="/images/arrow-r.png"></image>
+    </view>
+  </view>
+  <view style="margin-top: 20rpx;" class="list">
+    <view class="l-left">
+      <image src="/images/minelogout.png"></image>
+    </view>
+    <view class="l-middle">退出登录</view>
+    <view class="l-right">
+      <image src="/images/arrow-r.png"></image>
+    </view>
+  </view>
+
+
+
+
+
+</view>

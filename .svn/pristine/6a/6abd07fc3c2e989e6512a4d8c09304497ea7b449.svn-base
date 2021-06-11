@@ -1,0 +1,15 @@
+<!--pages/gradeexamination/gradeexamination.wxml等级考试-->
+<view class="grade">
+  <view class="date">
+    <!-- <van-button type="primary">按钮</van-button> -->
+  </view>
+  <view class="layer">
+    <view class="time-table" wx:for="{{list}}" wx:key="index">
+      <view class="left">
+        <view class="title">{{item.subject}}</view>
+        <view class="time">{{item.examDate + ' ' + item.examTime + '-' + item.examEndTime}}</view>
+      </view>
+      <view class="right"><view style="height:66rpx;margin:0 auto;">{{item.scope}}</view></view>
+    </view>
+  </view>
+</view>

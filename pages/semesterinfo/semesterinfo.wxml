@@ -1,0 +1,86 @@
+<!--pages/semesterinfo/semesterinfo.wxml课程详情-->
+<view class="info">
+  <view class="cate">
+    <view class="list mt-0">
+      <view class="list-l">课程号</view>
+      <view class="list-r">yu468247234234</view>
+    </view>
+    <view class="list">
+      <view class="list-l">课程名</view>
+      <view class="list-r">中国近代史</view>
+    </view>
+    <view class="list">
+      <view class="list-l">课序号</view>
+      <view class="list-r">12</view>
+    </view>
+    <view class="list">
+      <view class="list-l">课程班别名</view>
+      <view class="list-r">645893</view>
+    </view>
+    <view class="list">
+      <view class="list-l">任课老师</view>
+      <view class="list-r">秦秀英、秀才、张秀琴 秦秀英、秀才、张秀琴</view>
+    </view>
+    <view class="list">
+      <view class="list-l">学分</view>
+      <view class="list-r">80</view>
+    </view>
+    <view class="list">
+      <view class="list-l">选课属性</view>
+      <view class="list-r">必修</view>
+    </view>
+    <view class="list">
+      <view class="list-l">考核方式</view>
+      <view class="list-r">考察</view>
+    </view>
+    <view class="list">
+      <view class="list-l">考试性质</view>
+      <view class="list-r">重修</view>
+    </view>
+    <view class="list">
+      <view class="list-l">是否缓考</view>
+      <view class="list-r">否</view>
+    </view>
+        
+  </view>
+  <!-- 上课时间地点 -->
+  <view class="site">
+    <view class="title">上课时间地点</view>
+    <view class="layer">
+      <view class="schooltime-info">
+      <view class="info-l">周次</view>
+      <view class="info-r">第1-17周</view>
+    </view>
+    <view class="schooltime-info">
+      <view class="info-l">星期</view>
+      <view class="info-r">星期五</view>
+    </view>
+    <view class="schooltime-info">
+      <view class="info-l">节次</view>
+      <view class="info-r"> 2-3节A</view>
+    </view>
+    <view class="schooltime-info">
+      <view class="info-l">教室</view>
+      <view class="info-r">化工北楼阿012</view>
+    </view>
+    </view>
+    <view class="layer">
+      <view class="schooltime-info">
+      <view class="info-l">周次</view>
+      <view class="info-r">第1-17周</view>
+    </view>
+    <view class="schooltime-info">
+      <view class="info-l">星期</view>
+      <view class="info-r">星期五</view>
+    </view>
+    <view class="schooltime-info">
+      <view class="info-l">节次</view>
+      <view class="info-r"> 2-3节A</view>
+    </view>
+    <view class="schooltime-info">
+      <view class="info-l">教室</view>
+      <view class="info-r">化工北楼阿012</view>
+    </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "l-toast": "lin-ui/toast/index"
+  },
+  "navigationBarTitleText": "账号登录",
+  "navigationBarBackgroundColor": "#5D88FF",
+  "navigationBarTextStyle": "white"
+}

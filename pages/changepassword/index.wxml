@@ -1,0 +1,24 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 17:05:16
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-21 17:27:09
+-->
+<!--pages/changepassword/index.wxml-->
+<view class="change-password">
+  <view class="pass-input">
+    <view class="label">旧密码</view>
+    <input confirm-type="done" value="{{oldpass}}"/>
+  </view>
+  <view class="pass-input">
+    <view class="label">新密码</view>
+    <input confirm-type="done" value="{{oldpass}}"/>
+  </view>
+  <view class="pass-input">
+    <view class="label">重复密码</view>
+    <input confirm-type="done" value="{{oldpass}}"/>
+  </view>
+  <view class="btn">提交</view>
+</view>

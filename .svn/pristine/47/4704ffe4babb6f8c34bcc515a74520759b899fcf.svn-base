@@ -1,0 +1,52 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-21 16:06:36
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-21 17:20:09
+-->
+<!--pages/account/index.wxml-->
+<view class="account">
+  <view class="user-info">
+    <image src="{{init.base64Photo ? init.base64Photo : '/images/touxiang.png'}}"></image>
+    <view class="name">{{init.realName}}</view>
+  </view>
+  <view class="account-list">
+    <view class="account-list-item" bindtap="photoTap">
+      <text>照片</text>
+      <image src="/images/more.png"></image>
+    </view>
+    <view class="account-list-item">
+      <text>学号</text>
+      <view>{{init.studentNo}}</view>
+    </view>
+    <view class="account-list-item">
+      <text>院系</text>
+      <view>{{init.depName}}</view>
+    </view>
+    <view class="account-list-item">
+      <text>专业</text>
+      <view>{{init.majorName}}</view>
+    </view>
+    <view class="account-list-item">
+      <text>专业方向</text>
+      <view>{{init.direction ? init.direction : ''}}</view>
+    </view>
+    <view class="account-list-item">
+      <text>年级</text>
+      <view>{{init.gradeName}}</view>
+    </view>
+    <view class="account-list-item">
+      <text>班级</text>
+      <view>{{init.className}}</view>
+    </view>
+  </view>
+  <view class="account-list">
+    <view class="account-list-item" bindtap="changePassword" style="margin-top: 16rpx;">
+      <text>修改密码</text>
+      <image src="/images/more.png"></image>
+    </view>
+  </view>
+  
+</view>

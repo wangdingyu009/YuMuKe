@@ -1,0 +1,68 @@
+/* pages/semesterinfo/semesterinfo.wxss */
+.info {
+  width: 686rpx;
+  font-size: 32rpx;
+  color: #333336;
+  padding: 24rpx 32rpx;
+  background: #F5F5F6;
+}
+
+.cate {
+  width: 630rpx;
+  padding: 32rpx 28rpx;
+  background: #FFF;
+  border-radius: 16rpx;
+}
+.list {
+  display: flex;
+  justify-content: start;
+  margin-top: 20rpx;
+}
+.cate .list:nth-of-type(1) {
+  margin-top: 0;
+}
+.list-l {
+  width: 192rpx;
+  color: #99999C;
+}
+.list-r {
+  width: 430rpx;
+  white-space: wrap;
+}
+/* 上课时间地点 */
+.site {
+  width: 630rpx;
+  padding: 32rpx 28rpx;
+  background: #FFF;
+  border-radius: 16rpx;
+  margin-top: 16rpx;
+}
+.title {
+  color: #33333C;
+  font-weight: 600;
+  margin-bottom: 25rpx;
+}
+.layer {
+  padding: 24rpx;
+  background: rgba(93, 136, 255, 0.12);
+  border-radius: 8rpx;
+  margin-top: 16rpx;
+}
+.schooltime-info {
+  display: flex;
+  justify-content: start;
+  width: 574rpx;
+  font-size: 28rpx;
+  margin-top: 6rpx;
+}
+.layer .schooltime-info:nth-of-type(1) {
+  margin-top: 0;
+}
+.info-l {
+  width: 76rpx;
+  color: #99999C;
+}
+.info-r {
+  width: 498rpx;
+  white-space: wrap;
+}

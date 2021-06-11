@@ -1,0 +1,89 @@
+<!--pages/teachtaskinfo/teachtaskinfo.wxml教学任务详情-->
+<view class="info">
+  <view class="course">
+    <view class="desc">
+      <view class="title">课程号</view>
+      <view class="content">yu468247234234</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课程名</view>
+      <view class="content">生物药剂学与药物动力学</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课序号</view>
+      <view class="content">645893</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">是否主讲</view>
+      <view class="content">是</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">考试性质</view>
+      <view class="content">非硬性考试</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课程班性质</view>
+      <view class="content">必须</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">课程班别名</view>
+      <view class="content">广告学1班</view>
+    </view>
+    <view class="desc">
+      <view class="title-t">选课人数</view>
+      <view class="content">25人 <text bindtap="curriculavariable" class="view-all">查看全部</text></view>
+    </view>
+    <view class="line"></view>
+    <view class="desc">
+      <view class="title-t">合班</view>
+      <view class="content"><text class="view-all" bindtap="viewinclass">查看合班</text></view>
+    </view>
+    <view class="desc">
+      <view class="title-t">备注</view>
+      <view class="content">生物药剂学与药物动力学生物药剂学与药物动力学</view>
+    </view>
+
+  </view>
+  <!-- 上课时间地点 -->
+  <view class="time">
+    <view class="title">
+      上课时间地点
+    </view>
+    <view class="desc-info">
+      <view class="cycle">
+        <view class="title-l">周次</view>
+        <view class="con">第1-17周</view>
+      </view>
+      <view class="week">
+        <view class="title-l">星期</view>
+        <view class="con">星期五</view>
+      </view>
+      <view class="section">
+        <view class="title-l">节次</view>
+        <view class="con"> 2-3节A</view>
+      </view>
+      <view class="room">
+        <view class="title-l">教师</view>
+        <view class="con">化工北楼阿012</view>
+      </view>
+    </view>
+    <view class="desc-info">
+      <view class="cycle">
+        <view class="title-l">周次</view>
+        <view class="con">第1-17周</view>
+      </view>
+      <view class="week">
+        <view class="title-l">星期</view>
+        <view class="con">星期五</view>
+      </view>
+      <view class="section">
+        <view class="title-l">节次</view>
+        <view class="con"> 2-3节A</view>
+      </view>
+      <view class="room">
+        <view class="title-l">教师</view>
+        <view class="con">化工北楼阿012</view>
+      </view>
+    </view>
+  </view>
+</view>

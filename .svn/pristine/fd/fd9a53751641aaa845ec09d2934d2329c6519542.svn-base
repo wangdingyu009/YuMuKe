@@ -1,0 +1,191 @@
+<!--pages/courseexamineinfo/courseexamineinfo.wxml调课审批详情-->
+<view class="info">
+  <view class="reason">
+    <view class="state">{{desc.applyTeacherName}}提交的申请</view>
+    <view class="title">原因</view>
+    <view class="con">{{desc.reason || '暂无'}}</view>
+  </view>
+  <view class="layer">
+    <view class="intro">
+      <view class="item">
+        <view class="left">类型</view>
+        <view class="right">{{desc.courseTpye}}</view>
+      </view>
+      <view class="item">
+        <view class="left">课程号</view>
+        <view class="right">{{desc.pcourseId}}</view>
+      </view>
+      <view class="item">
+        <view class="left">课程名</view>
+        <view class="right">{{desc.courseName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">课序号</view>
+        <view class="right">{{desc.cseq}}</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人</view>
+        <view class="right">{{desc.applyTeacherName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">申请人电话</view>
+        <view class="right">{{desc.applyTeacherPhone}}</view>
+      </view>
+      <view class="item">
+        <view class="left">代课人</view>
+        <view class="right">{{desc.substituteName}}</view>
+      </view>
+      <view class="item">
+        <view class="left">代课人电话</view>
+        <view class="right">{{desc.substitutePhone}}</view>
+      </view>
+      <view class="item">
+        <view class="left">总学时</view>
+        <view class="right">{{desc.hour}}</view>
+      </view>
+      <!-- 其他学时 -->
+      <view wx:for="{{desc.otherHours.length > 0}}" class="item" wx:for="{{desc.otherHours}}" wx:key="index">
+        <view class="left">{{item.courseHourName}}</view>
+        <view class="right">{{item.courseHour}}</view>
+      </view>
+      <view class="item">
+        <view class="left">合班</view>
+        <view class="right" style="color: #5D88FF;" bindtap="viewInfo">查看合班</view>
+      </view>
+      <view class="item">
+        <view class="left">要求</view>
+        <view class="right">{{desc.demand || '暂无'}}</view>
+      </view>
+      <view class="item">
+        <view class="left">备注</view>
+        <view class="right">{{desc.explain}}</view>
+      </view>
+    </view>
+    <!-- 代课信息 -->
+    <view class="time" style="padding-bottom: 32rpx;">
+      <view class="title" style="position: relative;">
+        调课信息
+        <!-- <image src="/images/arrow-down.png" style="width: 48rpx;height: 48rpx;position:absolute;right:0rpx;top: 23rpx;"></image> -->
+      </view>
+
+        <view class="desc-info">
+          <block wx:for="{{desc.transferInfoList}}" wx:key="index">
+            <view wx:if="{{item.courseTpye == '停课'}}">
+              <view class="room">
+              <view class="title-l">{{item.courseTpye}}日期</view>
+              <view class="con">{{item.suspendCourseDate}}</view>
+            </view>
+            <view class="cycle">
+              <view class="title-l">教学周</view>
+              <view class="con">{{item.suspendTermWeek}}</view>
+            </view>
+            <view class="week">
+              <view class="title-l">节次</view>
+              <view class="con">{{item.suspendSectionName}}</view>
+            </view>
+            <view class="section">
+              <view class="title-l">星期</view>
+              <view class="con"> {{item.suspendWeeksName}}</view>
+            </view>
+            <view class="section">
+              <view class="title-l">教室</view>
+              <view class="con"> {{item.suspendRoomName}}</view>
+            </view>
+            </view>
+
+
+
+            <view wx:if="{{item.courseTpye == '补课'}}">
+              <view class="room">
+              <view class="title-l">{{item.courseTpye}}日期</view>
+              <view class="con">{{item.makeupCourseDate}}</view>
+            </view>
+            <view class="cycle">
+              <view class="title-l">教学周</view>
+              <view class="con">{{item.makeupTermWeek}}</view>
+            </view>
+            <view class="week">
+              <view class="title-l">节次</view>
+              <view class="con">{{item.makeupSectionName}}</view>
+            </view>
+            <view class="section">
+              <view class="title-l">星期</view>
+              <view class="con"> {{item.makeupWeeksName}}</view>
+            </view>
+            <view class="section">
+              <view class="title-l">教室</view>
+              <view class="con"> {{item.makeupRoomName}}</view>
+            </view>
+            </view>
+            <view wx:if="{{index != desc.transferInfoList.length - 1}}" style="height: 2rpx;background: #D2D2D2;margin-top: 24rpx;margin-bottom: 24rpx;"></view>
+          </block>
+          <!-- <view class="room">
+            <view class="title-l">课日期</view>
+            <view class="con">2020-12-30</view>
+          </view>
+          <view class="cycle">
+            <view class="title-l">教学周</view>
+            <view class="con">10</view>
+          </view>
+          <view class="week">
+            <view class="title-l">节次</view>
+            <view class="con">1-2</view>
+          </view>
+          <view class="section">
+            <view class="title-l">星期</view>
+            <view class="con"> 星期五</view>
+          </view>
+          <view class="section">
+            <view class="title-l">教室</view>
+            <view class="con"> 林语堂A309</view>
+          </view> -->
+        </view>
+
+
+    </view>
+  </view>
+  <view style="padding-left: 32rpx;padding-right: 32rpx;">
+    <!-- <view class="accessory">
+      <view class="left">附件</view>
+      <view class="right">关于林语堂楼A402.txt</view>
+    </view> -->
+    <view class="accessory" wx:for="{{desc.documents}}" wx:key="index" data-item="{{item}}" bindtap="downLoad">
+      <view class="left">附件</view>
+      <view class="right">{{item.fileName}}</view>
+    </view>
+    <view class="liucheng">
+      <view class="liucheng-title">流程</view>
+      <view wx:for="{{desc.coursesApprovalList}}" wx:key="index" class="layer-con">
+        <view class="cons">
+          <view class="color333">{{index == 0 ? '发起申请' : '审批人: ' + item.replyName}}</view>
+          <view class="color333 fw-400">{{index == 0 ? item.applyTeacherName : item.reply}}</view>
+        </view>
+        <view class="date color666">{{index == 0 ? item.applyTime : item.replyDate}}</view>
+        <view class="circles"></view>
+        <view class="shuxian {{desc.coursesApprovalList.length == 1 ? 'show-shuxian' : ''}}" ></view>
+      </view>
+
+      <view wx:if="{{desc.coursesApprovalList.length == 1}}" class="layer-cons">
+        <view class="cons">
+          <view class="color333">审批人:</view>
+          <view class="color333 fw-400">等待审批...</view>
+        </view>
+        <view class="date color666">待审批</view>
+        <view class="circles bc-999"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 底部确认拒绝 -->
+<view class="bottom-bt" wx:if="{{desc.showButton == 'Y'}}">
+  <view class="container">
+    <view bindtap="goRefuse" class="bottom-bt-l">拒绝</view>
+  <view bindtap="goConfirm" class="bottom-bt-r">确认</view>
+  </view>
+</view>
+<view wx:if="{{desc.showButton == 'Y'}}" style="height: 98rpx;"></view>
+
+<modal hidden="{{hiddenmodalput}}" confirmColor="#5D88FF" title="暂不支持该文档格式预览，请复制到浏览器打开" confirm-text="复制" cancel-text="取消" bindcancel="cancelM" bindconfirm="confirmM">
+      <view style="text-align:center;margin-top:10rpx;margin-bottom:10rpx;">{{zipUrl}}</view>
+</modal>
+

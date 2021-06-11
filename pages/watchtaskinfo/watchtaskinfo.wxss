@@ -1,0 +1,61 @@
+/* pages/watchtaskinfo/watchtaskinfo.wxss */
+.info {
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  background: #F5F5F6;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 40rpx 24rpx;
+  width: 638rpx;
+  background: #fff;
+  border-radius: 8rpx;
+}
+
+.item {
+  margin-top: 48rpx;
+  display: flex;
+  justify-content: start;
+}
+
+.content .item:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.left {
+  width: 80rpx;
+}
+
+.left image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.right {
+  width: 558rpx;
+  min-height: 89rpx;
+  padding-top: 5rpx;
+  /* height: 107rpx; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right .title {
+  color: #666669;
+  margin-bottom: 8rpx;
+  font-size: 24rpx;
+  font-weight: 400;
+}
+
+.right .desc {
+  color: #333336;
+  font-size: 32rpx;
+  font-weight: 400;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

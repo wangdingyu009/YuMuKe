@@ -1,0 +1,133 @@
+/* pages/courseexamination/courseexamination.wxss */
+.examination {
+  background: #FFF;
+  /* min-height: 100vh; */
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 750rpx;
+  /* height: 100px; */
+  min-height: 50px;
+  background: #FFF;
+  color: #333336;
+}
+
+.picker {
+  /* margin-top: 14rpx; */
+  margin-top: 7px;
+  margin-left: 32rpx;
+  position: relative;
+  display: inline-block;
+  /* border: 1rpx solid #CCCCCF; */
+  border: 1px solid #CCCCCF;
+  /* height: 56rpx; */
+  height: 28px;
+  /* line-height: 56rpx; */
+  line-height: 28px;
+  border-radius: 32rpx;
+  padding-left: 40rpx;
+  padding-right: 65rpx;
+  /* margin-bottom: 10rpx; */
+  margin-bottom: 5px;
+  /* line-height: 84rpx; */
+}
+
+.lines {
+  width: 750rpx;
+  /* height: 16rpx; */
+  height: 8px;
+  background: #F5F5F6;
+}
+
+.fix-head {
+  /* height: 100rpx; */
+  height: 50px;
+  /* border-bottom: 1rpx solid #F5F5F6; */
+  border-bottom: 1px solid #F5F5F6;
+  padding-left: 32rpx;
+  /* line-height: 100rpx; */
+  line-height: 50px;
+  color: #5D88FF;
+  font-size: 32rpx;
+}
+
+.picker image {
+  position: absolute;
+  right: 10rpx;
+  /* top: -2rpx; */
+  top: -1px;
+  width: 48rpx;
+  /* height: 48rpx; */
+  height: 24px;
+}
+/* 考试时间和地点 */
+.layer {
+  /* margin-top: 84rpx; */
+  /* margin-top: 42px; */
+  font-size: 32rpx;
+  color: #333336;
+}
+
+.list {
+  /* border-top: 16rpx solid #F5F5F6; */
+  border-top: 8px solid #F5F5F6;
+}
+.list .heads {
+  /* height: 100rpx; */
+  height: 50px;
+  border-bottom: 1px solid #F5F5F6;
+  padding-left: 32rpx;
+  /* line-height: 100rpx; */
+  line-height: 50px;
+  color: #5D88FF;
+}
+.con-info {
+  width: 686rpx;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  /* padding-top: 34rpx; */
+  /* padding-bottom: 34rpx; */
+  display: flex;
+  justify-content: space-between;
+}
+.info-l {
+  width: 16rpx;
+  /* height: 16rpx; */
+  height: 8px;
+  background: #FFAB5C;
+  margin-right: 32rpx;
+  /* margin-top: 42rpx; */
+  margin-top: 21px;
+}
+.info-r {
+  width: 638rpx;
+  /* height: 202rpx; */
+  /* padding-top: 34rpx; */
+  /* padding-bottom: 34rpx; */
+  height: 101px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-bottom: 1px solid #EEEEF1;
+}
+.info-r .top {
+  font-weight: 500;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.info-r .middle {
+  font-size: 28rpx;
+  color: #666669;
+}
+.info-r .bottom {
+  font-size: 28rpx;
+  color: #666669;
+}

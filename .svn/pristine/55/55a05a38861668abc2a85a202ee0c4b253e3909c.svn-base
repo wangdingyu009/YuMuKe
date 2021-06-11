@@ -1,0 +1,18 @@
+<!--pages/accountlogin/accountlogin.wxml-->
+<view class="container">
+  <view class="content">
+    <view class="mobile">
+      <image src="/images/mobile.png"></image>
+      <view class="line"></view>
+      <input type="text" placeholder="请输入手机号" />
+    </view>
+    <view style="margin-top: 32rpx;" class="mobile">
+      <image src="/images/lock.png"></image>
+      <view class="line"></view>
+      <input type="text" placeholder="请输入密码" />
+    </view>
+  </view>
+  <view class="login-btn">
+    <view>登录</view>
+  </view>
+</view>

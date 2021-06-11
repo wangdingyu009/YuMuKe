@@ -1,0 +1,30 @@
+/* pages/setting/index.wxss */
+.setting {
+  
+}
+.setting-list {
+  padding: 32rpx;
+  border-bottom: 1rpx solid #EEEEF1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.setting-list .label {
+  font-size: 32rpx;
+  color: #333336;
+}
+.setting-list:last-child {
+  border: none;
+}
+.more image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.more {
+  display: flex;
+  align-items: center;
+}
+.more text {
+  color: #99999C;
+  font-size: 28rpx;
+}

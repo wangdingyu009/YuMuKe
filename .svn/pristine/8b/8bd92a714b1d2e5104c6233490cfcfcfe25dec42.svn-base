@@ -1,0 +1,56 @@
+/* pages/curriculavariable/curriculavariable.wxss */
+page {
+  background: #fff;
+}
+
+.student {
+  padding: 28rpx 32rpx;
+}
+
+.table {
+  margin-top: 40rpx;
+  border: 1rpx solid #DDE4F6;
+}
+
+.head {
+  display: flex;
+  justify-content: start;
+  border-bottom: 1rpx solid #DDE4F6;
+  font-size: 32rpx;
+  color: #5D88FF;
+}
+
+.head view {
+  width: 342rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+}
+
+.desc {
+  display: flex;
+  justify-content: start;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+}
+
+.table .desc:nth-child(odd) {
+  background: #FBFBFC;
+  border-right: 1rpx solid #DDE4F6;
+}
+
+.left {
+  width: 341.5rpx;
+  border-right: 1rpx solid #DDE4F6;
+  border-bottom: 1rpx solid #DDE4F6;
+}
+
+.right {
+  width: 341.5rpx;
+  border-bottom: 1rpx solid #DDE4F6;
+}
+
+.table .desc:last-child .left, .table .desc:last-child .right {
+  border-bottom: 0;
+}

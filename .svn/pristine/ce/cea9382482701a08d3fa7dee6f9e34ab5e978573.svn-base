@@ -1,0 +1,59 @@
+<!--pages/switchapply/switchapply.wxml调课申请-->
+<view class="head">
+  <view class="week-r" style="width: 150rpx;">
+    <picker class="picker" bindchange="zhuangtaiChange" value="{{zhuangtaiIndex}}" range="{{zhuangtai}}">
+      <view class="pickermethod" style="font-size:24rpx;">
+        {{zhuangtai[zhuangtaiIndex]}}
+      </view>
+    </picker>
+    <image src="/images/dropdown.png"></image>
+  </view>
+  <view class="week-l" style="width:190rpx;">
+    <!-- <picker class="picker" bindchange="zhouciChange" value="{{zhouciIndex}}" range="{{zhouci}}">
+          <view class="pickermethod">
+            {{zhouci[zhouciIndex]}}
+          </view>
+        </picker> -->
+    <picker class="picker" mode="date" value="{{dateStart}}" start="{{limitStart}}" end="{{limitEnd}}" bindchange="bindDateChangeStart">
+      <view class="pickermethod" style="font-size:24rpx;">
+        {{dateStart || '开始日期'}}
+      </view>
+    </picker>
+    <image bindtap="zhouciChange" src="/images/dropdown.png"></image>
+  </view>
+  <view class="week-r" style="width:190rpx;">
+    <!-- <picker class="picker" bindchange="xingqiChange" value="{{xingqiIndex}}" range="{{xingqi}}">
+      <view class="pickermethod">
+        {{xingqi[xingqiIndex]}}
+      </view>
+    </picker> -->
+    <picker class="picker" mode="date" value="{{dateStart}}" start="{{limitStart}}" end="{{limitEnd}}" bindchange="bindDateChangeEnd">
+      <view class="pickermethod" style="font-size:24rpx;">
+        {{dateEnd || '结束日期'}}
+      </view>
+    </picker>
+    <image src="/images/dropdown.png"></image>
+  </view>
+
+</view>
+<view class="apply">
+  <view wx:for="{{list}}" wx:key="index" class="list" data-epid="{{item.epid}}" data-id="{{item.id}}" bindtap="goDesc">
+    <view class="title">{{item.courseName}}</view>
+    <view class="reason">原因：{{item.reason}}</view>
+    <view class="time">申请时间：{{item.applyTime}}</view>
+    <view class="type">调课类型：{{item.sortName}}</view>
+    <view wx:if="{{item.status == '1'}}" class="status tingke">
+      未通过
+    </view>
+    <view wx:if="{{item.status == '0'}}" class="status yitongguo">
+      已通过
+    </view>
+    <view wx:if="{{item.status == '2'}}" class="status daike">待审批</view>
+  </view>
+</view>
+
+<!-- 暂无数据 -->
+<view wx:if="{{list.length == 0}}" class="no-data">
+  <image src="../../images/zanwu.png"></image>
+  <view>暂无数据</view>
+</view>

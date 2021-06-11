@@ -1,0 +1,126 @@
+<!--pages/coursescore/coursescore.wxml课程成绩-->
+<view class="score">
+  <!-- 头部 -->
+  <view class="head">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name">
+      <view class="picker">
+        {{array[index].name}}
+        <image src="/images/dropdown.png"></image>
+      </view>
+    </picker>
+  </view>
+  <!-- 每学期分数 -->
+  <view class="summary" wx:if="{{list.length > 0}}">
+    <view class="title">
+      <!-- 这个待定 ，还需要修改 -->
+      <view>{{list[0].yearTerm}}</view>
+    </view>
+
+    <view class="layer">
+
+      <view style="border: 1rpx solid #CCDAFF;border-top:0;">
+        <!-- 循环下面class=desc -->
+        <view class="desc" wx:for="{{list}}" wx:key="index">
+          <view class="item">
+            <view class="top {{item.passed > 0 ? 'red' : ''}}" data-index="{{index}}" bindtap="titleColumn">
+              <view class="top-l ellipsis-1">{{item.courseName}}</view>
+              <view class="top-r">{{item.score + '分' || '--'}}</view>
+            </view>
+            <!-- 分数下面详情 要控制显示隐藏 -->
+            <view class="{{currentIndex == index ? 'bottom' : 'hidden'}}">
+              <view class="bottom-item">
+                <view class="bottom-item-l">课程名称</view>
+                <view class="bottom-item-r ellipsis-2">{{item.courseName || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">课程号</view>
+                <view class="bottom-item-r ellipsis-2">{{item.courseNo || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">课程班别名</view>
+                <view class="bottom-item-r ellipsis-2">{{item.alias || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">学号</view>
+                <view class="bottom-item-r ellipsis-2">{{item.studentNo || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">主讲老师</view>
+                <view class="bottom-item-r">{{item.teachers || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">学年</view>
+                <view class="bottom-item-r">{{item.year || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">学年学期</view>
+                <view class="bottom-item-r">{{item.yearTerm || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">学期</view>
+                <view class="bottom-item-r">{{item.termId || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">考试性质</view>
+                <view class="bottom-item-r">{{item.examType || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">选课属性</view>
+                <view class="bottom-item-r">{{item.courseType || '--'}}</view>
+              </view>
+              <!-- <view class="bottom-item">
+                <view class="bottom-item-l">评分</view>
+                <view class="bottom-item-r">80分</view>
+              </view> -->
+              <view class="bottom-item">
+                <view class="bottom-item-l">平时成绩</view>
+                <view class="bottom-item-r">{{item.hScore || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">期中成绩</view>
+                <view class="bottom-item-r">{{item.mScore || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">期末成绩</view>
+                <view class="bottom-item-r">{{item.fScore || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">学分</view>
+                <view class="bottom-item-r ellipsis-2">{{item.credit || '--'}}</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">总分</view>
+                <view class="bottom-item-r">{{item.score + '分' || '暂无成绩'}}</view>
+              </view>
+
+              <view class="bottom-item">
+                <view class="bottom-item-l">是否通过</view>
+                <view wx:if="{{item.passed == 0}}" class="bottom-item-r">及格</view>
+                <view wx:if="{{item.passed == 1}}" class="bottom-item-r">不及格</view>
+                <view wx:if="{{item.passed == 2}}" class="bottom-item-r">无成绩</view>
+              </view>
+              <view class="bottom-item">
+                <view class="bottom-item-l">成绩备注</view>
+                <view class="bottom-item-r">{{item.scoreRemark || '--'}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+
+    </view>
+
+  </view>
+  <!-- 没有数据的时候展示页 -->
+  <view wx:if="{{list.length == 0}}" class="no-data">
+    <image src="../../images/zanwu.png"></image>
+    <view>暂无数据</view>
+  </view>
+  <!-- 加载到底部的时候 提示 -->
+  <view style="height:20rpx;"></view>
+  <l-loadmore show="{{bottomShow}}" type="end" end-text="已经到底了" line="{{true}}">
+  </l-loadmore>
+  <view style="height:20rpx;"></view>
+</view>

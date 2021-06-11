@@ -1,0 +1,116 @@
+<!--pages/timetable/timetable.wxml课程课表-->
+<view style="padding-bottom: 10rpx;" class="timetable">
+  <view bindtap="goDetail" class="current-semester">
+    本学期课表
+  </view>
+  <view class="head">
+    <!-- 竖线阴影 -->
+    <view class="shadows"></view>
+    <!-- 选择学期 -->
+    <view class="popup">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{choiceSemester}}" range-key="name">
+        <view class="picker">
+          {{choiceSemester[index].name}}
+          <image src="/images/dropdown.png"></image>
+        </view>
+      </picker>
+    </view>
+    <!-- 选项卡 -->
+    <l-segment l-class="item" even="{{false}}" animated-for-line="{{true}}" l-header-class="item" height="100"
+      item-width="135" scrollable="{{isScrollable}}" active-color="#5D88FF" bind:linchange="changeTabs">
+      <l-segment-item tab="第1周" key="one" />
+      <l-segment-item tab="第2周" key="two" />
+      <l-segment-item tab="第3周" key="three" />
+      <l-segment-item tab="第4周" key="four" />
+      <l-segment-item tab="第5周" key="five" />
+      <l-segment-item tab="第6周" key="six" />
+      <l-segment-item tab="第7周" key="seven" />
+
+    </l-segment>
+  </view>
+  <view class="table">
+    <view class="title">
+      <view class="index">课节</view>
+      <view class="table-header">
+        <view class="weeks">星期一</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期二</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期三</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期四</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期五</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期六</view>
+        <view class="dates">04-23</view>
+      </view>
+      <view class="table-header">
+        <view class="weeks">星期日</view>
+        <view class="dates">04-23</view>
+      </view>
+    </view>
+    <view class="info">
+      <!-- 左边序号 -->
+      <view class="info-l">
+        <view class="info-index" wx:for="{{leftIndex}}" wx:key="index">{{item.name}}</view>
+      </view>
+      <!-- 右边课程 -->
+      <view class="info-r">
+        <!-- 周一 -->
+        <view class="info-r-1 info-child">
+          <!-- 判断状态 正常 停课 补课 到时候循环 设置距离顶部的距离 -->
+          <!-- <view style="z-index:100000;position:absolute;left: 0;top: 108rpx; color: #fff;font-size:24rpx;text-align: center;background: red;width: 94rpx;height:32rpx;line-height: 32rpx;border-radius: 14rpx 14rpx 8rpx 8rpx;border: 2rpx solid #FFFFFF;background: #FF5D5D;">停用</view> -->
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+          <!-- 设置上课科目连续几节课然后动态设置高度背景色 -->
+          <view wx:for="{{courseNumber}}" wx:key="index"
+            class="info-child-con {{'height' + item.number}} {{'distance' + item.some}}">
+            <view style="position: relative;">
+              <view class="text-value">{{item.content}}</view>
+            </view>
+          </view>
+        </view>
+        <!-- 周二 -->
+        <view class="info-r-2 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+          <!-- 设置上课科目连续几节课然后动态设置高度背景色 -->
+          <view wx:for="{{courseNumber1}}" wx:key="index"
+            class="info-child-con {{'height' + item.number}} {{'distance' + item.some}}">
+            <view class="text-value">{{item.content}}</view>
+          </view>
+        </view>
+        <!-- 周三 -->
+        <view class="info-r-3 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周四 -->
+        <view class="info-r-4 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周五 -->
+        <view class="info-r-5 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周六 -->
+        <view class="info-r-6 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+        <!-- 周日 -->
+        <view class="info-r-7 info-child">
+          <view class="info-child-child" wx:for="{{leftIndex}}" wx:key="index"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,112 @@
+/* pages/schoolcalendar/index.wxss */
+page {
+  background-color: #F5F5F6;
+}
+.school-calendar {
+  
+}
+.school-calendar .top {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 32rpx;
+  margin-bottom: 16rpx;
+}
+.top .top-left {
+  color: #333336;
+  font-size: 28rpx;
+
+}
+.top .top-left text {
+  margin-right: 10rpx;
+}
+.select-month {
+  display: flex;
+  align-items: center;
+  border-radius: 8rpx;
+  /* border: 1rpx solid #D8D8DB; */
+  padding: 10rpx 24rpx;
+}
+.select-month text {
+  color: #333336;
+  font-size: 28rpx;
+}
+.select-month image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 2rpx;
+}
+.calendar-box {
+  background-color: #fff;
+}
+.list {
+  padding: 32rpx;
+}
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2rpx 12rpx 0rpx rgba(0, 0, 0, 0.1);
+  border-radius: 8rpx;
+  margin-bottom: 28rpx;
+  padding: 26rpx 20rpx;
+}
+.list-item text {
+  color: #333336;
+  font-size: 32rpx;
+  padding-left: 12rpx;
+}
+.list-item image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.calendar {
+  padding: 18rpx 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.week {
+  width: 88rpx;
+  color: #333336;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #F2F2F9;
+}
+.week-title {
+  padding-top: 30rpx;
+  margin-bottom: 66rpx;
+}
+.week-list {
+  padding: 20rpx 0;
+  line-height: 40rpx;
+}
+.days {
+  flex-grow: 1;
+}
+
+/* 日历样式 */
+.active-coloro {
+  color: #fff;
+  background: #FF5D5D;
+}
+
+.active-colort {
+  color: #fff;
+  background: #5D88FF;
+}
+
+/* 出勤  */
+/* .dotcolor-o{
+  background-color: #FF5D5D !important;  
+} */
+/* 未出勤  */
+/* .dotcolor-t{
+  background-color: #FF5D5D !important;  
+} */
+
+.txt_style{
+  color: #333;
+}

@@ -1,0 +1,19 @@
+/* pages/contactus/index.wxss */
+.contact-us {
+  background-color: #fff;
+}
+.contact-us-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx;
+  border-bottom: 1rpx solid #EEEEF1;
+}
+.contact-us-list text{
+  color: #333336;
+  font-size: 32rpx;
+}
+.contact-us-list image {
+  width: 48rpx;
+  height: 48rpx;
+}

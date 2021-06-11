@@ -1,0 +1,48 @@
+/* pages/accountlogin/accountlogin.wxss */
+.container {
+  height: 100vh;
+  background: #F0F2F5;
+}
+.content {
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  padding-top: 80rpx;
+}
+.mobile {
+  display: flex;
+  justify-content: start;
+  height: 48rpx;
+  padding-top: 26rpx;
+  padding-bottom: 26rpx;
+  padding-left: 32rpx;
+  border: 1px solid #CCCCCF;
+}
+.mobile image {
+  width: 48rpx;
+  height: 48rpx;
+}
+.line {
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  width: 2rpx;
+  height: 48rpx;
+  background: #D8D8DB;
+}
+.mobile input {
+  width: 538rpx;
+}
+.login-btn {
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  /* margin-top: 180rpx; */
+  margin-top: 160rpx;
+}
+.login-btn view {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background: #5D88FF;
+  color: #fff;
+  border-radius: 8rpx;
+}

@@ -1,0 +1,129 @@
+// pages/accountlogin/accountlogin.js
+const {
+  getCodeByWeixin,
+  login
+} = require('../../utils/api')
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    mobile: '',
+    password: '',
+  },
+  telChange(e) {
+    this.setData({
+      mobile: e.detail.value
+    })
+  },
+  pswChange(e) {
+    this.setData({
+      password: e.detail.value
+    })
+  },
+  // 点击登录
+ goLogin() {
+    wx.login({
+      success: async (res1) => {
+        console.log(res1,'登录code')
+        let params = {
+          username: this.data.mobile,
+          password: this.data.password,
+          code: res1.code
+        }
+        let res11 = await login(params)
+        if (res11.code === 1) {
+          wx.setStorageSync('token', res11.data.token)
+          wx.setStorageSync('roles', res11.data.userRoles)
+          wx.lin.showToast({
+            title: '登录成功~',
+            icon: 'success',
+            success: res => {
+              wx.switchTab({
+                url: '/pages/index/index',
+              })
+            }
+          })
+          
+        }
+        console.log(res11,'loginbyweixin')
+      }
+    })
+  },
+
+  // 是否已经绑定了微信号 如果已经绑定了微信号那么就不用走账号登录了 直接进首页
+  isBindWechat() {
+    wx.login({
+      success: async (res) => {
+        let params = {
+          code: res.code
+        }
+        let res1 = await login(params)
+        console.log(res1,'是否已经绑定了微信')
+      }
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+    // let v = wx.getStorageSync('token')
+    // if (v) {
+    //   wx.switchTab({
+    //     url: '/pages/index/index',
+    //   })
+    // }
+    // this.isBindWechat()
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

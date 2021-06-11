@@ -1,0 +1,25 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: yanghui
+ * @Date: 2020-10-22 13:45:54
+ * @LastEditors: yanghui
+ * @LastEditTime: 2020-10-23 14:23:48
+-->
+<!--pages/help/index.wxml-->
+<view>
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+    <van-collapse-item title="常见问题一" name="1">
+      优慕课在线教育科技(北京)有限责任公司是国家高新技术企业，公司于2014年底由原清华大学教育技术研究所数字化学习研究与应用中心改制成立 ，“清华教育在线”系列科研成果和技术支持团队转入公司。
+    </van-collapse-item>
+    <van-collapse-item title="常见问题二" name="2">
+      优慕课在线教育科技(北京)有限责任公司是国家高新技术企业，公司于2014年底由原清华大学教育技术研究所数字化学习研究与应用中心改制成立 ，“清华教育在线”系列科研成果和技术支持团队转入公司。
+    </van-collapse-item>
+    <van-collapse-item title="常见问题三" name="3">
+      优慕课在线教育科技(北京)有限责任公司是国家高新技术企业，公司于2014年底由原清华大学教育技术研究所数字化学习研究与应用中心改制成立 ，“清华教育在线”系列科研成果和技术支持团队转入公司。
+    </van-collapse-item>
+    <van-collapse-item title="常见问题四" name="4">
+      优慕课在线教育科技(北京)有限责任公司是国家高新技术企业，公司于2014年底由原清华大学教育技术研究所数字化学习研究与应用中心改制成立 ，“清华教育在线”系列科研成果和技术支持团队转入公司。
+    </van-collapse-item>
+  </van-collapse>
+</view>

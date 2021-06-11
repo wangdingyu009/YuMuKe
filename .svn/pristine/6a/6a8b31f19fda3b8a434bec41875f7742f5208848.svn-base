@@ -1,0 +1,172 @@
+// pages/timetable/timetable.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    courseNumber: [
+      {
+        some: 2, // 第几节课
+        number: 2, // 连续节数
+        content: '世界发展简史及国内中外历史的发展史当代简史'
+      },
+      {
+        some: 7, // 第几节课
+        number: 1, // 连续节数
+        content: '当代医学世界发展简史及国内中外历史的发展史当代简史'
+      },
+      {
+        some: 9, // 第几节课
+        number: 5, // 连续节数
+        content: '三维设计世界发展简史及国内中外历史的发展史当代简史原来如此元拉什福德看时间付款后 '
+      },
+    ], // 课程节数详情，设置高度用
+    courseNumber1: [
+      {
+        some: 1, // 第几节课
+        number: 2, // 连续节数
+        status: 0, // 停课
+        content: '世界发展简史及国内中外历史的发展史当代简史'
+      },
+      {
+        some: 5, // 第几节课
+        number: 3, // 连续节数
+        status: 1, // 正常
+        content: '当代医学世界发展简史及国内中外历史的发展史当代简史'
+      },
+      {
+        some: 10, // 第几节课
+        number: 5, // 连续节数
+        status: 2, //补课
+        content: '三维设计世界发展简史及国内中外历史的发展史当代简史原来如此元拉什福德看时间付款后 '
+      },
+    ], // 课程节数详情，设置高度用
+    leftIndex: [
+      {name: 1},
+      {name: 2},
+      {name: 3},
+      {name: 4},
+      {name: 5},
+      {name: 6},
+      {name: 7},
+      {name: 8},
+      {name: 9},
+      {name: 10},
+      {name: 11},
+      {name: 12},
+      {name: 13},
+      {name: 14},
+    ], // 左边索引1-14
+    index: 0, // 顶部下拉框的索引值
+    choiceSemester:  [
+      {
+        name: '2020年春'
+      },
+      {
+        name: '2020年夏'
+      },
+      {
+        name: '2020年秋'
+      },
+      {
+        name: '2020年冬'
+      },
+    ], // 选择学期底部弹出框
+    array: [
+      {
+        name: '全部'
+      },
+      {
+        name: '2020年春季'
+      },
+      {
+        name: '2020年夏季'
+      },
+      {
+        name: '2020年秋季'
+      },
+      {
+        name: '2020年冬季'
+      },
+    ], // 底部弹出框
+    isScrollable: true,
+    itemWidth: 125
+  },
+
+  // 点击当前学期
+  goDetail() {
+    wx.navigateTo({
+      url: '/pages/currentsemester/currentsemester?title=2020春',
+    })
+  },
+
+  // 点击下拉框触发
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+
+  // 选项卡改变的时候
+  changeTabs(e) {
+    console.log(e,'选项卡')
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

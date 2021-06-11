@@ -1,0 +1,94 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/accountlogin/accountlogin",
+    "pages/timetable/timetable",
+    "pages/index/index",
+    "pages/info/info",
+    "pages/mine/mine",
+    "pages/coursescore/coursescore",
+    "pages/currentsemester/currentsemester",
+    "pages/semesterinfo/semesterinfo",
+    "pages/courseexamination/courseexamination",
+    "pages/watchtask/watchtask",
+    "pages/watchtaskinfo/watchtaskinfo",
+    "pages/gradeexamination/gradeexamination",
+    "pages/roomtime/roomtime",
+    "pages/roomdatequery/roomdatequery",
+    "pages/schoolcalendar/index",
+    "pages/account/index",
+    "pages/photo/index",
+    "pages/changepassword/index",
+    "pages/contactus/index",
+    "pages/aboutus/index",
+    "pages/roomweekquery/roomweekquery",
+    "pages/roomselect/roomselect",
+    "pages/synthesize/synthesize",
+    "pages/supplytask/supplytask",
+    "pages/teachtask/teachtask",
+    "pages/setting/index",
+    "pages/mymessage/index",
+    "pages/messagedetial/index",
+    "pages/supplytaskinfo/supplytaskinfo",
+    "pages/currenttask/currenttask",
+    "pages/teachtaskinfo/teachtaskinfo",
+    "pages/viewinclass/viewinclass",
+    "pages/curriculavariable/curriculavariable",
+    "pages/switchapply/switchapply",
+    "pages/switchapplyinfo/switchapplyinfo",
+    "pages/roomapply/roomapply",
+    "pages/roomapplyinfo/roomapplyinfo",
+    "pages/courseexamine/courseexamine",
+    "pages/courseexamineinfo/courseexamineinfo",
+    "pages/confirm/confirm",
+    "pages/refuse/refuse",
+    "pages/roomapprove/roomapprove",
+    "pages/roomapproveinfo/roomapproveinfo",
+    "pages/studywarn/studywarn",
+    "pages/infotypelist/infotypelist",
+    "pages/readfile/readfile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "优慕课",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-calendar": "/vant/calendar/index",
+    "l-loadmore": "lin-ui/loadmore/index"
+  },
+  "tabBar": {
+    "color": "#99999C",
+    "selectedColor": "#3C7EFF",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index-selected.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "消息",
+        "iconPath": "/images/info.png",
+        "selectedIconPath": "/images/info-selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/mine.png",
+        "selectedIconPath": "/images/mine-selected.png"
+      }
+    ]
+  },
+  "plugins": {},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

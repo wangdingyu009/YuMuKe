@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-dialog": "../../vant/dialog/index"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "设置"
+}

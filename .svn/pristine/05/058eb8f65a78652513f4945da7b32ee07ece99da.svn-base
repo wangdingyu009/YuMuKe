@@ -1,0 +1,20 @@
+var filter = {
+  tel: function (val) {
+    return val.substring(0,3)+'****'+val.substring(7)
+  },
+  splitDate: function(val) {
+    if (val) {
+      return val.substring(5)
+    } else {
+      return ''
+    }
+  },
+  sort: function(val) {
+      return val + 1
+  }
+}
+module.exports = {
+  tel: filter.tel,
+  split: filter.splitDate,
+  sort: filter.sort
+}

@@ -1,0 +1,46 @@
+<!--pages/roomapprove/roomapprove.wxml教室审批-->
+<view class="head">
+  <view class="week-r" style="width: 150rpx;">
+    <picker class="picker" bindchange="zhuangtaiChange" value="{{zhuangtaiIndex}}" range="{{zhuangtai}}">
+      <view class="pickermethod" style="font-size:24rpx;">
+        {{zhuangtai[zhuangtaiIndex] || '审批状态'}}
+      </view>
+    </picker>
+    <image src="/images/dropdown.png"></image>
+  </view>
+  <view class="week-l" style="width:190rpx;">
+    <picker class="picker" mode="date" value="{{dateStart}}" start="{{limitStart}}" end="{{limitEnd}}" bindchange="bindDateChangeStart">
+      <view class="pickermethod" style="font-size:24rpx;">
+        {{dateStart || '开始日期'}}
+      </view>
+    </picker>
+    <image bindtap="zhouciChange" src="/images/dropdown.png"></image>
+  </view>
+  <view class="week-r" style="width:190rpx;">
+    <picker class="picker" mode="date" value="{{dateStart}}" start="{{limitStart}}" end="{{limitEnd}}" bindchange="bindDateChangeEnd">
+      <view class="pickermethod" style="font-size:24rpx;">
+        {{dateEnd || '结束日期'}}
+      </view>
+    </picker>
+    <image src="/images/dropdown.png"></image>
+  </view>
+
+</view>
+<!-- 头部下拉框end -->
+<!-- 列表start -->
+<view class="list">
+  <view class="layer" wx:for="{{list}}" wx:key="index" bindtap="goDetail">
+    <view class="item-1">{{item.borrowRuleName}}</view>
+    <view class="item-3">申请时间：{{item.borrowTime}}</view>
+    <view class="item-2">申请人：{{item.borrowerName}}</view>
+    <view wx:if="{{item.reviewStatus == '已通过' || item.reviewStatus == '批准'}}" class="item-5">已通过</view>
+    <view wx:if="{{item.reviewStatus == '待审批'}}" class="item-5 blue">待审批</view>
+  </view>
+</view>
+
+<!-- 暂无数据 -->
+<view wx:if="{{list.length == 0}}" class="no-data">
+  <image src="../../images/zanwu.png"></image>
+  <view>暂无数据</view>
+</view>
+

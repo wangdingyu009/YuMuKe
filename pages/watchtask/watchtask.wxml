@@ -1,0 +1,39 @@
+<!--pages/watchtask/watchtask.wxml监考任务-->
+<view class="watch">
+  <!-- 日期选择 -->
+  <view class="section">
+    <picker class="date-left" mode="date" value="{{startDate}}" bindchange="bindDateChangeStart">
+      <view class="picker">
+        {{startDate}}
+      </view>
+      <image src="/images/dropdown.png"></image>
+    </picker>
+    <text style="line-height:88rpx;margin-right:10rpx;">-</text>
+     <picker class="date-right" mode="date" value="{{startDate}}" bindchange="bindDateChangeEnd">
+      <view class="picker">
+        {{endDate}}
+      </view>
+      <image src="/images/dropdown.png"></image>
+    </picker> 
+  </view>
+  <view style="height: 8rpx;"></view>
+  <!-- 监考内容 -->
+  <view class="content">
+    <view data-id="{{item.id}}" bindtap="goInfo" wx:for="{{list}}" wx:key="index" class="item {{item.overDueStatus ? 'overdue' : 'item1'}}">
+      <view class="name">
+        <view>课程名称:</view>
+        <view>{{item.courseName}}</view>
+      </view>
+      <view class="numbers">
+        <view>考场:</view>
+        <view>{{item.roomName}}</view>
+      </view>
+      <view class="dates">
+        <view>监考日期:</view>
+        <view>{{item.invigilateDate + ' ' + item.startTime + '-' + item.endTime}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+

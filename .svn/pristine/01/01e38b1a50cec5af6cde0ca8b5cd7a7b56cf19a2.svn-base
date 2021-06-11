@@ -1,0 +1,46 @@
+/* pages/messagedetial/index.wxss */
+page {
+  background-color: #F5F5F6;
+}
+.message {
+  background-color: #fff;
+  padding: 32rpx;
+
+}
+.message .title {
+  font-weight: 600;
+  color: #333336;
+  line-height: 56rpx;
+  font-size: 40rpx;
+}
+.message .time {
+  font-weight: 400;
+  color: #99999C;
+  line-height: 44rpx;
+  font-size: 28rpx;
+  margin-top: 32rpx;
+}
+.message .content {
+  font-weight: 400;
+  color: #333336;
+  line-height: 44rpx;
+  font-size: 28rpx;
+  margin-top: 32rpx;
+}
+.file {
+  background-color: #fff;
+  padding: 26rpx 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16rpx;
+}
+.file .label {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333336;
+}
+.file .file-url {
+  font-size: 28rpx;
+  color: #5D88FF;
+}

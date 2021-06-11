@@ -1,0 +1,304 @@
+/* pages/timetable/timetable.wxss */
+.timetable {
+  background: #FFF;
+  min-height: 100vh;
+}
+
+/* 选项卡 */
+.item {
+  border-bottom: 0 !important;
+  width: 500rpx !important;
+  font-size: 32rpx !important;
+  color: #666669 !important;
+}
+
+/* 选择学期 */
+.head {
+  position: relative;
+}
+
+.head .popup {
+  width: 186rpx;
+  padding-right: 60rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 28rpx;
+  color: #666669;
+  text-align: right;
+}
+
+.picker {
+  position: relative;
+}
+
+.head .picker image {
+  position: absolute;
+  right: -41rpx;
+  top: 20rpx;
+  width: 48rpx;
+  height: 48rpx;
+}
+
+/* 竖线阴影 */
+.shadows {
+  position: absolute;
+  right: 241rpx;
+  top: 4rpx;
+  width: 6rpx;
+  height: 92rpx;
+  background: rgba(0, 0, 0, 0.1);
+  filter: blur(1px);
+}
+
+/* 表格 */
+.table {
+  width: 750rpx;
+  height: 1280rpx;
+  background: #F8F8FA;
+}
+
+.table .title {
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: start;
+  font-size: 24rpx;
+  color: #333336;
+  font-weight: 500;
+}
+
+.title .index {
+  /* width: 64rpx; */
+  width: 42rpx;
+  height: 68rpx;
+  line-height: 37rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  padding-left: 22rpx;
+  text-align: left;
+}
+
+.title .table-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 98rpx;
+  height: 68rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  text-align: center;
+}
+
+/* .title .table-header .weeks {} */
+.title .table-header .dates {
+  font-size: 20rpx;
+  font-weight: 400;
+}
+
+.table .info {
+  background: #FFF;
+  display: flex;
+  justify-content: start;
+}
+
+/* 表格左边索引 */
+.table .info-l {
+  background: #F8F8FA;
+  width: 64rpx;
+  text-align: center;
+  height: 1180rpx;
+  font-size: 28rpx;
+  color: #333336;
+  font-weight: 400;
+}
+
+.table .info-l .info-index {
+  height: 84.285rpx;
+  line-height: 84.285rpx;
+}
+
+/* 表格右边的内容 每一个宽度96 */
+.table .info-r {
+  display: flex;
+  justify-content: start;
+  width: 686rpx;
+  background: #FFF;
+  height: 1180rpx;
+  /* border-bottom: 2rpx solid #F8F8FA; */
+}
+
+.info-child {
+  position: relative;
+  width: 96rpx;
+  border-right: 2rpx solid #F8F8FA;
+  border-bottom: 2rpx solid #F8F8FA;
+}
+
+.info-child-child {
+  height: 82.2857rpx;
+  border-bottom: 2rpx solid #F8F8FA;
+}
+
+/* 设置上课科目连续几节课然后动态设置高度 */
+.info-r .info-child:nth-child(even) .info-child-con {
+  background: #6CCB85;
+}
+
+.info-child-con {
+  position: absolute;
+  left: 0;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  font-size: 24rpx;
+  color: #FFF;
+  border-radius: 8rpx;
+  background: #5D88FF;
+}
+
+.info-child-con view {
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+
+.distance1 {
+  top: 0;
+}
+
+.distance2 {
+  top: 84.2857rpx;
+}
+
+.distance3 {
+  top: 168.5714rpx;
+}
+
+.distance4 {
+  top: 252.8571rpx;
+}
+
+.distance5 {
+  top: 337.1428rpx;
+}
+
+.distance6 {
+  top: 421.4285rpx;
+}
+
+.distance7 {
+  top: 505.7142rpx;
+}
+
+.distance8 {
+  top: 589.9999rpx;
+}
+
+.distance9 {
+  top: 674.2856rpx;
+}
+
+.distance10 {
+  top: 758.5716rpx;
+}
+
+.distance11 {
+  top: 842.8573rpx;
+}
+
+.distance12 {
+  top: 927.143rpx;
+}
+
+.distance13 {
+  top: 1011.4287rpx;
+}
+
+.distance14 {
+  top: 1095.7144rpx;
+}
+
+.height1 {
+  height: 84.2857rpx;
+}
+
+.height1 .text-value {
+  padding-bottom: 5rpx;
+  -webkit-line-clamp: 1;
+}
+
+
+.height2 {
+  height: 168.5714rpx;
+}
+
+.height2 .text-value {
+  padding-bottom: 5rpx;
+  -webkit-line-clamp: 3;
+}
+
+.height3 {
+  height: 252.8571rpx;
+}
+
+.height3 .text-value {
+  padding-bottom: 5rpx;
+  -webkit-line-clamp: 6;
+}
+
+.height4 {
+  height: 337.1428rpx;
+}
+
+.height4 .text-value {
+  padding-bottom: 5rpx;
+  -webkit-line-clamp: 8;
+}
+
+.height5 {
+  height: 421.4285rpx;
+}
+
+.height5 .text-value {
+  padding-bottom: 5rpx;
+  -webkit-line-clamp: 10;
+}
+
+.height6 {
+  height: 505.7142rpx;
+}
+
+.height6 .text-value {
+  padding-bottom: 5rpx;
+  -webkit-line-clamp: 12;
+}
+
+/* 课程状态 正常 停课 补课 */
+
+
+/* 本学期课表 */
+.current-semester {
+  z-index: 999;
+  color: #FFF;
+  text-align: center;
+  position: fixed;
+  bottom: 150rpx;
+  right: 32rpx;
+  width: 80rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  height: 72rpx;
+  line-height: 36rpx;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #8786CB 0%, #4F4E9B 100%);
+  box-shadow: 0px 4px 26px 0px rgba(79, 78, 155, 0.2);
+}
