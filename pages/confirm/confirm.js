@@ -55,7 +55,6 @@ Page({
         res = await confirmOrRefuse(params)
         break;
     }
-    console.log(res, '确认')
     if (res.code == 1) {
       wx.lin.showToast({
         title: '提交成功~',
