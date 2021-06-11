@@ -68,7 +68,7 @@ Page({
       })
     } else {
       wx.lin.showToast({
-        title: '审批失败，请稍后重试~',
+        title: res.message,
         icon: 'warning',
         success: (res) => {}
       })
